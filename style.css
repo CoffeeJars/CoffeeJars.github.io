@@ -1,19 +1,9 @@
 
-table, th, td {
-    border-style: transparent;
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 15px;
-	text-align: center;
-}
-
 p.month {
     text-decoration: underline;
     margin-bottom: 1em;
     margin-top: 2em;
+    
 }
 
  p.date {
@@ -30,7 +20,7 @@ p.title {
 body {
     margin-top: 2em;
     background: #fff;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'IBM Plex Serif', serif;
 }
 
 .content {
