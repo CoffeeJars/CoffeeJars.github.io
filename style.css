@@ -1,26 +1,37 @@
 
 p.month {
-    text-decoration: underline;
     margin-bottom: 1em;
     margin-top: 2em;
+    font-family: 'Roboto', sans-serif;
+
     
 }
 
  p.date {
     margin-bottom: 2em;
     margin-top: 1em;
+    font-family: 'Roboto', sans-serif;
+
 }
   
+h2 {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+
+}
+
+
 p.title {
-    text-decoration: underline;
     margin-bottom: 1em;
     margin-top: 2em;
+    font-family: 'Roboto', sans-serif;
+
     }
     
 body {
     margin-top: 2em;
     background: #fff;
-    font-family: 'IBM Plex Serif', serif;
+    font-family: 'EB Garamond', serif;
 }
 
 .content {
