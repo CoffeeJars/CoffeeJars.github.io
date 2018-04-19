@@ -5,9 +5,10 @@ p.month {
     margin-top: 1em;
     font-weight: bold;
     text-transform: uppercase;
-        font-family: 'Domine', serif;
+    font-family: 'Domine', serif;
 
 }
+
 
  p.date {
     margin-bottom: .5em;
@@ -58,6 +59,21 @@ body {
     padding: 5px;
 }
 
+.content2 {
+    max-width: 750px;
+    margin: auto;
+    background: white;
+    padding: 5px;
+}
+
+.col {
+    max-width: 15px;
+    margin: auto;
+    background: white;
+    padding: 75px;
+    float: left;
+}
+
 .header {
     text-align: right;
     max-width: 8em;
@@ -96,3 +112,13 @@ div.fixed {
     left: 20px;
 }
 
+ a.hide img { 
+     display:none; 
+     border: 5px;
+     border-color: black;
+     width: 30%;
+     height: 30%;
+     float: right;
+
+}
+ a:hover img { display:block; }
