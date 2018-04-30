@@ -1,11 +1,11 @@
 
 p.month {
     font-size: .9em;
-    margin-bottom: .5em;
-    margin-top: 1em;
+    margin-bottom: 0em;
+    margin-top: 2em;
     font-weight: bold;
     text-transform: uppercase;
-    font-family: 'Domine', serif;
+    font-family: 'EB Garamond', serif;
 
 }
 
@@ -18,13 +18,13 @@ p.month {
 
 h2 {
     font-size: 2.8em;
-    font-family: 'Domine', serif;
+    font-family: 'Roboto Slab', serif;
     text-decoration: none;
 }
 
 h3 {
     font-size: 1.2em;
-    font-family: 'Domine', serif;
+    font-family: 'Roboto Slab', serif;
     text-decoration: none;  
     
 }
@@ -46,8 +46,8 @@ p.title {
     }
     
 body {
-    font-size: .9em;
-    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 1em;
+    font-family: 'EB Garamond', serif;
     background: #fff;
     margin: 0px;
 }
@@ -78,14 +78,14 @@ body {
     text-align: right;
     max-width: 8em;
     margin-right: auto;
-    margin-left: 10%;
+    margin-left: 25%;
     background: white;
     padding: 0px;   
     
 }
 
 .wrapper {
-    max-width: 70%;
+    max-width: 90%;
     margin: auto;
     background: white;
     padding: 0px;   
