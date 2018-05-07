@@ -15,7 +15,11 @@ p.month {
     margin-top: .5em;
 
 }
-
+h1 {
+    font-size: 10em;
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-decoration: none;
+}
 h2 {
     font-size: 2.8em;
     font-family: 'IBM Plex Sans', sans-serif;
