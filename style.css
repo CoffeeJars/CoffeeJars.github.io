@@ -9,7 +9,12 @@ p.month {
 
 }
 
+p.rec {
+        font-family: 'IBM Plex Mono', monospace;
+            font-size: .8em;
 
+    
+}
  p.date {
     margin-bottom: .5em;
     margin-top: .5em;
