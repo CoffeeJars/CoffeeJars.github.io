@@ -1,18 +1,44 @@
+body {
+    background-color: #f2f9fc;
+}    
+
 #center {
     text-align: center;
-    max-width: 21em;
+    max-width: 15em;
     margin-left: auto;
     margin-right: auto;
 }
-#blog {
-    text-align: left;
-    max-width: 18em;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Fanwood Text', serif;
-    font-size: 1.1em;
 
+#page {
+    text-align: left;
+    max-width: 35em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    margin-top: 1em;
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 1em;
 }
+
+
+table {
+    text-align: center;
+ width: 100%;
+padding: 1em;
+    font-family: 'IBM Plex Mono', monospace;
+        text-align: center;
+        font-size: .8em;
+ 
+}
+
+td {
+    width: 100%;
+    border-style: solid;
+    border-width: .0em;     
+}
+
+
+
 
 #weekdiv {
     padding-top: 1em;
@@ -20,25 +46,29 @@
     
 }
 h1 {
-    margin: .4em;
-    font-size: 4.2em;
-    font-family: 'Noticia Text', serif;
+    margin: .2em;
+    font-size: 4.5em;
+    color: #003040;
+    font-family: 'Slabo 27px', serif;
+    text-align: center;
+    
 }
 
 h2 {
     margin-bottom: .5em;
-    font-size: 2.5em;
-    font-family: sans-serif;
-}   
-
-.weeknum {
+    font-size: 2.7em;
+font-family: 'Roboto', sans-serif;
     text-align: left;
-      font-size: 2em;
-font-family: 'Work Sans', sans-serif;
-    width: 30%;
-}
+} 
 
+h3 {
+        color: #003040;
 
+        margin-bottom: .3em;
+        font-size: 1.9em;
+font-family: 'Roboto', sans-serif;
+    text-align: left;
+    } 
 
 .desc {
     text-align: right;
@@ -58,50 +88,40 @@ td {
  padding: .5em;
 }
 
-     h3 {
-        margin-bottom: .5em;
-        font-size: 2.5em;
-     font-family: 'Roboto Mono', monospace;
-    } 
+
 
 p.tag {
-font-family: "Courier New", Courier, monospace;
-        text-align: center;
-        font-size: .9em;
-        margin-bottom: 1em;
-    }
-p.week {
-    font-family: 'Noticia Text', serif;
-        text-align: right;
-        font-size: .9em;
+    font-family: 'IBM Plex Mono', monospace;
+        font-size: .8em;
     }
 
-    p.link {
-        border-style: solid;
-        border-width: .5px;
-        padding: 5px;
-    
-    
-    }
-  
-    .about {
-      font-family: "Courier New", Courier, monospace;
-    font-size: .7em;
-        font-weight: 800;
-  
-        
-    }    
-    
+ p.tag2 {
+     padding: 1em;
+    font-family: 'IBM Plex Mono', monospace;
+        font-size: .75em;
+     text-align: center;
+    margin: 1em;
+    padding: 0;    
+} 
 * {
     box-sizing: border-box;
 }
 
-    body {
-        background-color: white;
-    }    
-    
+.col1 {
+    float: left;
+    width: 20em;
+    margin: 10px;
+    font-family: 'EB Garamond', serif
+}
 
+.col2 {
 
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: .8em;
+    float: left;
+    width: 10em;
+    margin: 10px;
+}
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 1050px) {
@@ -113,6 +133,6 @@ p.week {
 
 
 a {
-    text-decoration: none;
+    text-decoration: underline;
     color: black;
 }
