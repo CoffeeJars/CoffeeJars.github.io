@@ -5,10 +5,9 @@
 body {
     background: #fff;
     color: #303030;
-    line-height: 1.3em;
     margin: 0;
-        font-family: roboto, sans-serif;
-
+    line-height: 1.5em;
+    font-family: roboto, sans-serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -19,57 +18,44 @@ body {
     max-width: 350px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 40px;
     overflow: hidden;
-
 }   
 
 /* The container for all posts */
 #post {
     max-width: 600px;
-    margin: 0.8%;
+    margin: 15px;
     width: 84%;
     margin-left: auto; 
     margin-right: auto;
 }
 
-
-h1    {
-    font-size: 6.5rem;
-    letter-spacing: -8px;
-    line-height: 1em;
-    text-align: justify;
-    hyphens: auto;
-    margin: 0;
-    position: fixed;
-    bottom: 10px;
-    color: #fff;
-    font-family: roboto, sans-serif;
-    font-weight: 700;
-}
-
-h1:hover {
-    text-decoration: none;
-    color: black;
-}
+/* h2 is used for all post headers */
 h2 {
-    font-family: helvetica, arial, geneva, roboto, sans-serif;
+    font-family: roboto, sans-serif;
     color: black;
     font-size: 34px;
-        line-height: 1em;
-}
-h3 {    
-    color: #000;
-    text-transform: lowercase;
-    font-family: helvetica, arial, geneva, roboto, sans-serif;
-    font-size: 1.3em;
+    line-height: 1.1em;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* h3 is used for all post subheaders */
+h3 {    
+    color: black;
+    text-transform: capitalize;
+    font-family: roboto, sans-serif;
+    font-size: 22px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* header styles the top image of me */
 .header {
-    padding: 15px;
+    padding: 20px;
+    padding-top: 40px;
     display: block;
     width: 35%;
     margin-left: auto;
@@ -78,7 +64,7 @@ h3 {
 
 .right2 {
     float: right;
-    font-family: 'Helvetica', 'arial', 'geneva', 'roboto', sans-serif;    
+    font-family: 'roboto', sans-serif;    
     font-weight: 400;
     font-size: 12px;
     padding: 0px;
@@ -86,34 +72,28 @@ h3 {
 }
 
 a.title {
-            text-decoration: none;
+    text-decoration: none;
 
 }
 .title {
-    font-family: 'Helvetica', 'arial', 'geneva', 'roboto', sans-serif;    
+    font-family: 'roboto', sans-serif;    
     font-weight: 400;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 3px;
     text-align: left;
-
 }
 
 .year {
-    font-family: 'Helvetica', 'arial', 'geneva', 'roboto', sans-serif;    
+    font-family: 'roboto', sans-serif;    
     font-weight: 900;
     font-size: 26px;
-    line-height: 0px;
+    line-height: 6px;
     text-align: left;
     }
 
 a {
     color: inherit;
-        text-decoration: none;
-
+    text-decoration: none;
 }
 
-    
-
-
- 
     
