@@ -5,54 +5,56 @@
 body {
     background: #fff;
     color: #303030;
-    margin: 0;
     line-height: 1.5em;
-    font-family: roboto, sans-serif;
+    font-family: 'Cardo', serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* The container for the index*/
-#label {
+#index {
     max-width: 350px;
     margin-left: auto;
     margin-right: auto;
-    overflow: hidden;
 }   
 
-/* The container for all posts */
 #post {
-    max-width: 600px;
-    margin: 15px;
-    width: 84%;
+    max-width: 550px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-left: auto; 
     margin-right: auto;
+    font-family: 'Cardo', serif;
 }
 
-/* h2 is used for all post headers */
+.rice {
+    width: 100%;
+    border: solid 1px black;
+}
+
 h2 {
-    font-family: roboto, sans-serif;
-    color: black;
-    font-size: 34px;
+    font-weight: 400;
+    font-family: 'helvetica', 'roboto', sans-serif;
+    color: #000;
+    font-size: 50px;
+    letter-spacing: -2px;
     line-height: 1.1em;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* h3 is used for all post subheaders */
 h3 {    
-    color: black;
+    color: #000;
     text-transform: capitalize;
-    font-family: roboto, sans-serif;
-    font-size: 22px;
+    font-weight: 400;
+    font-family: 'helvetica', 'roboto', sans-serif;
+    font-size: 30px;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* header styles the top image of me */
 .header {
     padding: 20px;
     padding-top: 40px;
@@ -64,7 +66,7 @@ h3 {
 
 .right2 {
     float: right;
-    font-family: 'roboto', sans-serif;    
+    font-family: 'helvetica', 'roboto', sans-serif;
     font-weight: 400;
     font-size: 12px;
     padding: 0px;
@@ -76,7 +78,7 @@ a.title {
 
 }
 .title {
-    font-family: 'roboto', sans-serif;    
+    font-family: 'helvetica', 'roboto', sans-serif;
     font-weight: 400;
     font-size: 13px;
     line-height: 3px;
@@ -84,7 +86,7 @@ a.title {
 }
 
 .year {
-    font-family: 'roboto', sans-serif;    
+    font-family: 'helvetica', 'roboto', sans-serif;
     font-weight: 900;
     font-size: 26px;
     line-height: 6px;
