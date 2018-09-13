@@ -1,15 +1,16 @@
 /*  Stylesheet for my blog!
     Stephen@stephlog.com
-    Aug 8th 2018    */
+    UPDATED: Sept 13th 2018    */
 
 body {
-    background: #fff;
+    background: #ffffff;
     color: #303030;
-    line-height: 1.5em;
-    font-family: 'Cardo', serif;
+    line-height: 1.7em;
+    font-size: .9em;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-family: 'helvetica', 'roboto', sans-serif;
 }
 
 #index {
@@ -19,42 +20,31 @@ body {
 }   
 
 #post {
-    max-width: 550px;
-    padding-left: 20px;
-    padding-right: 20px;
+    max-width: 500px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin-left: auto; 
     margin-right: auto;
-    font-family: 'Cardo', serif;
 }
 
-.rice {
-    width: 100%;
-    border: solid 0px black;
-}
-
-h2 {
+h1 {
     font-weight: 400;
     font-family: 'helvetica', 'roboto', sans-serif;
     color: #000;
     font-size: 50px;
     letter-spacing: -2px;
     line-height: 1.1em;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
-h3 {    
+h2 {    
     color: #000;
-    text-transform: capitalize;
+    text-transform: lowercase;
     font-weight: 400;
     font-family: 'helvetica', 'roboto', sans-serif;
     font-size: 30px;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
+/* style for image on homepage */
 .header {
     padding: 20px;
     padding-top: 40px;
@@ -64,24 +54,19 @@ h3 {
     margin-right: auto;
 }
 
-.right2 {
+
+.right {
     float: right;
-    font-family: 'helvetica', 'roboto', sans-serif;
-    font-weight: 400;
-    font-size: 12px;
+    font-size: .9em;
     padding: 0px;
     display: inline;
 }
 
-a.title {
-    text-decoration: none;
-
-}
 .title {
     font-family: 'helvetica', 'roboto', sans-serif;
     font-weight: 400;
-    font-size: 13px;
-    line-height: 3px;
+    font-size: .9em;
+    line-height: 6px;
     text-align: left;
 }
 
@@ -96,6 +81,7 @@ a.title {
 a {
     color: inherit;
     text-decoration: none;
+    border-bottom: dashed .5px #303030;
 }
 
     
