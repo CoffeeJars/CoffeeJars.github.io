@@ -7,20 +7,17 @@ body {
     color: #303030;
     line-height: 1.7em;
     font-size: .9em;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-family: 'helvetica', 'roboto', sans-serif;
+    font-family: 'Cardo', serif;
 }
 
 #index {
-    max-width: 350px;
+    max-width:200px;
     margin-left: auto;
     margin-right: auto;
 }   
 
 #post {
-    max-width: 800px;
+    max-width: 400px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto; 
@@ -30,29 +27,19 @@ body {
 h1 {
     font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;    
     color: #000000;
-    font-size: 2rem;
-    border-bottom: 3px solid;
-    line-height: 1.5;
-    font-weight: bold;
-        padding-bottom: .5rem;
+    font-size: 44px;
+    line-height: .7;
+    font-weight: 700;
+    background-color: 
 }
 
 h2 {    
     color: #000;
     font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;    
-    font-size: 1.5rem;
+    font-size: 30px;
+    border-bottom: 3px solid black;
+    padding-bottom: 10px;
 }
-
-/* style for image on homepage */
-.header {
-    padding: 20px;
-    padding-top: 40px;
-    display: block;
-    width: 35%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 
 .right {
     float: right;
@@ -62,14 +49,16 @@ h2 {
 }
 
 .title {
-    font-family: 'helvetica', 'roboto', sans-serif;
     font-weight: 400;
     font-size: .9em;
-    line-height: 6px;
     text-align: left;
 }
 
 a {
+    font-family: 'IBM Plex Mono', monospace;
     color: inherit;
     text-decoration: none;
+    font-style: italic;
+    font-size: .9em;
 }
+
