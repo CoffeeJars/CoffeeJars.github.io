@@ -1,5 +1,3 @@
-# coffeejars.github.io
+# sdunc.github.io
 
-My digital acre 
-
-![home](blog.png)
+My little blog for thoughts and stuff
