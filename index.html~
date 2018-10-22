@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stephen's Blog</title>
+</head>
+<style>
+body {
+    letter-spacing:  -.3px;  
+    font-size: 26px;
+    margin: 15px;
+    font-weight: 400;
+    font-family: 'Arimo', sans-serif;
+}
+h1 {
+    font-size: 26px;
+    font-weight: 700;
+}
+.textbox {
+    font-weight: 500;
+    max-width: 20em;
+    margin-left: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+a {
+    text-decoration: none;
+    color: black;
+    display: table;
+}    
+</style>
+<body>
+<div class="textbox">        
+    <h1>Stephen Duncanson</h1>
+    <a href="">brutally minimal, I don't care</a>
+    <a href="">drinking black coffee</a>
+    <a href="">emacs for python</a>
+    <a href="">building good study habits</a>
+    <a href="">fitness plans</a>
+    <a href="">breaking up with my phone</a>
+</div>    
+</body>
+</html>
