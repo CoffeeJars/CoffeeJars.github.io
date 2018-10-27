@@ -4,35 +4,98 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Stephen's Blog</title>
+<title>Index</title>
 <style type="text/css">
-body{
-    margin:40px auto;
-    max-width:650px;
+body {
+    letter-spacing: -.5px;
+    font-size: 18px;
+        color:#444;
+
+}
+#page{
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1{
+    font-size: 36px;
+    font-style: italic;
+    margin-bottom: 150px;
+        
+    }
+    p{
     line-height:1.6;
-    font-size:18px;
-    color:#444;
-    padding:0 10px;
+
+    }
+    
+    .year{
+        font-weight: bold;
+    }
+    .yeartitle {
+        font-weight: bold;
+        
+    }
+* {
+    box-sizing: border-box;
 }
-h1,h2,h3{
-    line-height:1.2;
+
+/* Create two unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
 }
+
+.left {
+  width: 15%;
+text-align: right;
+}
+
+.right {
+  width: 85%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+    a {text-decoration: none;
+    color: inherit;}
 
 </style>
 </head>
 <body>
-<header><h1>Stephen's Blog</h1>
-    <p>I'm studying computer science. Currently, I'm focused on learning python and becoming more adept with emacs. Check out my <a href="https://github.com/sdunc">github</a>.</p>
-    <p>In my <em>very</em> limited free time I enjoy lifting weights and playing chess. Not that I am particularly good at either.</p>
+<div id="page">
+    <h1>Stephen's Blog</h1>
 
-</header>
-<content>
-    <h2>Posts</h2>
-    <ul>
-        <li><a href="qtest.html">(python)The Q-Test</a></li>
-        <li><a href="qpq.html">Quid pro quo productivity</a></li>
-        <li><a href="gcfpy.html">(python) Finding the greatest common factor</a></li>
-    </ul>
-</content>
+
+<div class="row">
+  <div class="column left">
+    <p class=year>About Me</p>
+    <p></p>
+  </div>
+  <div class="column right">
+    <p class=yeartitle></p>
+    <p>I'm studying computer science. I've been really enjoying using python to solve project Euler questions. I've also been trying to become more adept with emacs.</p>
+      <p>
+In my free time I enjoy lifting weights and reading. I compete in the USAPL 93kg class. My best lifts in competition are: 402/270/430. 
+</p>
+      
+  </div>
+</div>
+<div class="row">
+  <div class="column left">
+    <p class=year>2018</p>
+    <p>1</p>
+  </div>
+  <div class="column right">
+    <p class=yeartitle>Posts</p>
+    <p><a href=".html"></a></p>
+      
+  </div>
+</div>
+</div>
 </body>
 </html>
