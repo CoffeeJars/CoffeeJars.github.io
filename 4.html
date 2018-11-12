@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4</title>
+<style type="text/css">
+body {
+    letter-spacing: -.5px;
+    font-size: 18px;
+           color:#444;
+
+}
+#page{
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1{
+    font-size: 36px;
+    font-style: italic;
+    margin-bottom: 150px;
+        
+}
+    p{
+    line-height:1.6;
+
+    }
+
+</style>
+</head>
+<body>
+<div id="page">
+  <h1>4<text style="margin-left: 30px;">Building the Teletype Castle</text></h1>
+  <img src="teletype.jpg" style="width: 100%" >
+    <p>As part of my ongoing quest to increase productivity, I have decided to build a digital cabin in the woods. A hideout of sorts, a retreat from distractions, a castle high on the mountainside. I’m sure Ralph Waldo Emerson would be very proud. </p>
+
+    <p>It’s really just a partition on my hard drive: a 32gb ext4 partition with Debian GNU/Linux. It has no X-server, no networking, just emacs. </p>
+
+    <p>I created a 16gb fat32 partition as well, to serve as mutually accessible storage space. Whatever programs or stories or work that gets done in castle can be saved onto the bridge partition and accessed by OSX.</p>
+
+    <p>The steps I followed to dual boot MacOS and Debian are summarized below:
+      <ol>
+	<li>Install MacOS</li>
+	<li>Download and unzip rEFInd</li>
+	<li>Create Linux, swap and storage partitions under OSX</li>
+<li>Download .deb packages you want in the castle and save them to the storage partition</li>
+	<li>Install Debian using the nonfree firmware iso (to get networking to work for the netinstall)</li>
+	<li>Reboot & Reset NVRAM (Command + Option + P + R)</li>
+	<li>Using the recovery mode terminal (So SIP is disabled) run the refind-install script</li>
+	<li>Run dpkg-reconfigure console-setup (switch to a 32 font to accommodate the retina screen)</li>
+	
+</ol>
+</p>
+
+
+
+
+  </div>
+</div>
+</div>
+</body>
+</html>
