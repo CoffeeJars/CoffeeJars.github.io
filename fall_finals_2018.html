@@ -2,6 +2,9 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+
+
 <title>Stephlog</title>
 <style>
 
@@ -34,7 +37,7 @@ a{
   <p><b>The Aforementioned Unfinished Homework-</b>
     <ul>
       <li>INQ 391 - Portfolio Binder </li>
-      <li>INQ 391 - Final Reflection Essay</li>
+      <li><del>INQ 391 - Final Reflection Essay</del></li>
       <li>MAT 122 - Online Practice Problems</li>
       <li>CHE 120 - Lab Report</li>
     </ul>
@@ -47,6 +50,53 @@ a{
  <p>I am going to read and take notes on the ~100 pages of chapter 10, try to distill it down. I need to regroup, refocus, come back fresh in an hour and power through the chapter tonight.  </p>
 
   <p><b>Update 3- </b><br>
-It's Sunday, December 2nd. It's 10:53am and I'm rattling along the rails to New Haven. I'm going to a bookstore/cafe. Thanks to my chemistry lab partner, progress has been made on the lab report front, as I'm still in a deadlock with mathematics. I did have a breakthrough in understanding how the sums of unlike trig functions can be rewritten as a single function through transformations. By setting the sum of unlike trig functions equal to the sum of angles formula, we create a system of nonlinear equations, where the transformations can be solved for algebraically.
+    It's Sunday, December 2nd. It's 10:53am and I'm rattling along the rails to New Haven. I'm going to a bookstore/cafe. Thanks to my chemistry lab partner, progress has been made on the lab report front, as I'm still in a deadlock with mathematics. I did have a breakthrough in understanding how the sums of unlike trig functions can be rewritten as a single function through transformations. By setting the sum of unlike trig functions equal to the sum of angles formula, we create a system of nonlinear equations, where the transformations can be solved for algebraically.
+  </p>
+
+
+  <p><b>Update 4- </b><br>
+    Well this is not going as I would have hoped. It's 8:37pm, coffee is going on right after I post this. Two more sections of math to go. I will detail below how to solve the trig system of equations. The one good thing is that I finished my reflection essay for INQ 391. Took me about 20 minutes to write three pages. </p>
+  <p><b>Rewrite 3sin(x) + 6cos(x) in the form Asin(x+`phi`)</b></p>
+  <p>   All we need to remember for this problem are two identities:
+    <ol>
+      <li>sin(`alpha + beta`) = `cos(alpha)sin(beta) + sin(alpha)cos(beta)`</li>
+      <li>`cos^2(theta)+sin^2(theta)=1`</li>
+    </ol>
+  </p>
+  <p>By setting the original equation equal to the sum identity, we get an equation that can be simplified:</p>
+  <p>
+    `3sin(x) + 6cos(x) =  Acos(phi)sin(beta) + Asin(phi)cos(beta)`
+
+  </p>
+  <p>
+    Looking at the balanced equation, you can see that if it's balanced then:<br>
+    `Acos(phi) = 3`<br>
+    `Asin(phi) = 6`
+    </p>
+  <p>This is because on the left side of the equation sin(x) is being multiplied by 3, on the right sin(`beta`) is being multiplied by `Acos(phi)`. Therefore: `Acos(phi) = 3` and `Asin(phi) = 6`.
+  </p>
+  <p>
+    Since we know the value of Asin(`phi`) and Acos(`phi`) we can use the second Pythagorean identity to solve for the value of A. </p>
+  <p>
+    `A(cos^2(phi) + sin^2(phi) = 1)`<br>
+    `A^2cos^2(phi) + A^2sin^2(phi) = A^2`<br>
+    `3^2 + 6^2 = A^2`<br>
+    `A = 3sqrt(5)`
+
+  </p>
+  <p>
+    Now we have everything we need to solve for `phi`.</p>
+  <p>
+    `3sqrt(5)cos(phi) = 3`<br>
+    `cos(phi) = 3/(3sqrt(5))`<br>
+    `phi = cos^-1 (1/sqrt(5))`
+  </p>
+  <p>
+    Finally putting it all together!</p>
+  <p>
+    `3sqrt(5)sin(x + 63°)`
+  </p>
+  <p>PS: `phi` is only roughly 63 degrees...</p>
+
 </body>
 </html>
