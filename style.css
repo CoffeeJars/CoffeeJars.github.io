@@ -1,21 +1,54 @@
+/*
+Stylesheet for Stephen's Blog
+Updated: December 8th 2018
+*/
+
 body {
   text-align: justify;
-  hyphens: auto;
-  padding: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 400px;
-  font-size: 18px;
-  line-height: 1.4;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 100;
+  font-size: 16px;
+  background-color: rgb(28,27,27);
+  color: rgb(255,255,255);
+  /*line-height: 1.4;*/
+  padding: 0px;
+  margin: 0px;
 }
+
+.soapbar{
+  padding: 20px;
+  height: 100vh;
+  max-width: 360px;
+  float: left;
+}
+
+p {
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+
+table{
+  width: 100%;
+}
+
+
 
 ul{
   list-style-type: circle;
   margin-top: 0px;
 }
 
+.line{
+  letter-spacing: -3px;
+}
+
+
 h1{
-  font-size: 25px;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: -1px;
 }
 
 h2{
@@ -27,6 +60,6 @@ h2{
 
 a{
   text-decoration: none;
-  font-style: italic;
-  color: #000000;
+  font-weight: 300;
+  color: rgb(255,255,255);
 }
