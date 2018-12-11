@@ -1,46 +1,156 @@
 /*
 Stylesheet for Stephen's Blog
-Updated: December 8th 2018
+Updated: December 11th 2018
 */
-
 body {
-  text-align: justify;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 100;
-  font-size: 16px;
-  background-color: rgb(28,27,27);
-  color: rgb(255,255,255);
-  /*line-height: 1.4;*/
-  padding: 0px;
-  margin: 0px;
 }
 
-.soapbar{
-  padding: 20px;
-  height: 100vh;
-  max-width: 360px;
-  /*float: left;*/
+
+
+#textbox{
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  padding: 40px;
+  text-align: justify;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.4;
+  max-width: 320px;
+}
+#bodybox{
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  padding: 40px;
+  text-align: justify;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.4;
+  max-width: 500px;
+}
+.me {
+  margin-top: 5px;
+  display: block;
   margin-left: auto;
   margin-right: auto;
+  padding: 10px;
+  width: 120px;
+}
+
+.year {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 0px;
+
+}
+
+
+.tab { margin-top: 0px; margin-bottom: 0px; margin-left: 40px; }
+
+
+.code {
+  color: #000000;
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: #eeeeee;
+  /*border: 1px solid black;*/
+  font-size: 13px;
+  padding: 10px;
+}
+
+h1{
+  display: inline;
+  font-size: 36px;
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: -1px;
+
+}
+
+h2{
+  font-weight: 400;
+  font-size: 22px;
+  padding-bottom: 0px;
+  margin-bottom: 5px;
+}
+
+hr {
+  border: 1px solid #444444;
+}
+
+ul{
+  padding-top: 0px;
+  padding-right: 0px;
+  list-style-type: circle;
+  margin-top: 0px;
+  text-align: left;
+  margin-top: 0px;
+}
+
+li{
+  margin-top: 0px;
+  padding: 0px;
+  margin: 0px;
+
+}
+
+
+
+
+a{
+  text-decoration: none;
+  color: #000000;
+}
+
+/*
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  color: #000000;
+  background-color: #ffffff;
+  margin: 0px;
+  padding: 20px;
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+  width: 450px;
 }
 
 p {
+  text-align: justify;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+
+
+.textbox {
+  padding: 20px;
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+  width: 450px;
+}
+
+
+h1{
+  font-size: 24px;
+  display: inline;
+  font-style: italic;
+  font-weight: 400;
+}
+
+
+
+.caption {
+  font-style: italic;
   padding: 0px;
   margin-top: 0px;
   margin-bottom: 20px;
 }
 
-
-table{
-  width: 100%;
-}
-
-/*Possibility! */
-.vl {
-  border-left: 1px dashed;
-  border-color: rgb(255,255,255);
-  height: 100vh;
+.berg{
   float: left;
+  width: 240px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 
@@ -49,22 +159,16 @@ ul{
   margin-top: 0px;
 }
 
-.line{
-  letter-spacing: -3px;
+hr {
+  border-top: 2px solid black;
+
 }
 
-
-h1{
-  font-size: 16px;
-  font-weight: 300;
-  letter-spacing: -1px;
-}
-
-h2{
-  font-weight: 600;
-  font-size: 18px;
-  padding: 0px;
+h2 {
+  font-size: 20px;
   margin: 0px;
+  margin-top: 10px;
+  padding: 0px;
 }
 
 a{
@@ -72,3 +176,6 @@ a{
   font-weight: 300;
   color: rgb(255,255,255);
 }
+
+
+*/
