@@ -37,9 +37,8 @@ body {
 }
 
 .year {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 700;
   margin-bottom: 0px;
 
 }
