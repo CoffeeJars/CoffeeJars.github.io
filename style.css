@@ -1,179 +1,31 @@
 /*
 Stylesheet for Stephen's Blog
-Updated: December 11th 2018
+Updated: December 14th 2018
 */
+
 body {
-}
-
-
-
-#textbox{
-  font-family: 'EB Garamond', serif;
-  font-size: 18px;
-  padding: 40px;
   text-align: justify;
-  margin-right: auto;
-  margin-left: auto;
-  line-height: 1.4;
-  max-width: 320px;
-}
-#bodybox{
-  font-family: 'EB Garamond', serif;
-  font-size: 18px;
-  padding: 40px;
-  text-align: justify;
-  margin-right: auto;
-  margin-left: auto;
-  line-height: 1.4;
-  max-width: 500px;
-}
-.me {
-  margin-top: 5px;
-  display: block;
+  font-size: 16px;
+  background-color: white;
+  color: black;
   margin-left: auto;
   margin-right: auto;
-  padding: 10px;
-  width: 120px;
-}
-
-.year {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 0px;
-
-}
-
-
-.tab { margin-top: 0px; margin-bottom: 0px; margin-left: 40px; }
-
-
-.code {
-  color: #000000;
-  font-family: 'IBM Plex Mono', monospace;
-  background-color: #eeeeee;
-  /*border: 1px solid black;*/
-  font-size: 13px;
-  padding: 10px;
+  max-width: 300px;
 }
 
 h1{
-  display: inline;
-  font-size: 36px;
-  font-family: 'IBM Plex Mono', monospace;
-  letter-spacing: -1px;
-
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: overline underline;
+  margin-bottom: 2px;
 }
-
 h2{
-  font-size: 22px;
-  padding-bottom: 0px;
-  margin-bottom: 5px;
+  margin-top: 8px;
+  text-align: center;
+  text-decoration: underline red;
 }
 
-hr {
-  border: 1px solid #444444;
+b{
+  color: red;
+  font-weight: 900;
 }
-
-ul{
-  padding-top: 0px;
-  padding-right: 0px;
-  list-style-type: circle;
-  margin-top: 0px;
-  text-align: left;
-  margin-top: 0px;
-}
-
-li{
-  margin-top: 0px;
-  padding: 0px;
-  margin: 0px;
-
-}
-
-
-
-
-a{
-  text-decoration: none;
-  color: #000000;
-}
-
-/*
-body {
-  font-family: 'IBM Plex Mono', monospace;
-  color: #000000;
-  background-color: #ffffff;
-  margin: 0px;
-  padding: 20px;
-  background-color: white;
-  margin-right: auto;
-  margin-left: auto;
-  width: 450px;
-}
-
-p {
-  text-align: justify;
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-
-
-.textbox {
-  padding: 20px;
-  background-color: white;
-  margin-right: auto;
-  margin-left: auto;
-  width: 450px;
-}
-
-
-h1{
-  font-size: 24px;
-  display: inline;
-  font-style: italic;
-  font-weight: 400;
-}
-
-
-
-.caption {
-  font-style: italic;
-  padding: 0px;
-  margin-top: 0px;
-  margin-bottom: 20px;
-}
-
-.berg{
-  float: left;
-  width: 240px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-
-ul{
-  list-style-type: circle;
-  margin-top: 0px;
-}
-
-hr {
-  border-top: 2px solid black;
-
-}
-
-h2 {
-  font-size: 20px;
-  margin: 0px;
-  margin-top: 10px;
-  padding: 0px;
-}
-
-a{
-  text-decoration: none;
-  font-weight: 300;
-  color: rgb(255,255,255);
-}
-
-
-*/
