@@ -47,10 +47,11 @@ a:hover{
 
 
 h1{
-  font-family: 'charterbold';
-  font-size: 48px;
-    padding: 0px;
-  margin: 0px;
+  	font-family: 'charterregular';	
+	font-size: 32px;
+	letter-spacing: -1px;
+	padding: 0px;
+ 	margin: 0px;
 }
 
 h2{
