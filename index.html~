@@ -2,19 +2,13 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="icon.png">
     <link rel="stylesheet" href="style.css">
 <title>stephlog</title>
   </head>
   <body>
-   <div class=holder>
-	<div class=box>
-	<img src="me.jpg" style="width: 270px;">
-	</div>  
-      <div class=box>
-        <h1>Stephen Duncanson</h1>
-	<p>Aspiring civil engineer, girevik, emacs wizard, coffee addict, bookworm. </p>
+    <div id="main">
+      <p>Stephen's Blog<br>Aspiring civil engineer, girevik, emacs wizard-in-training, coffee addict, bookworm, minimalist.  </p>
+      <p><a href="study.html">study time</a></p>
       </div>
-    </div>
   </body>
 </html>

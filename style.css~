@@ -11,28 +11,21 @@ body{
 }
 
 p{
+    margin-bottom: 0px;
   font-family: 'charterregular';
-    line-height: 1.4;
+  line-height: 1.4;
+  text-align: justify;
+  -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+  hyphens: auto;
 }
 
-.holder{
+#main{
   padding: 20px;
-  max-width: 650px;
+  max-width: 150px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.tagline{
-  padding: 0px;
-  margin: 0px;
-
-}
-
-
-.box{
-  padding: 0px;
-  float: left;
-  width: 300px;
+  text-align: justify;
 }
 
 a{
@@ -61,11 +54,16 @@ h2{
 }
 
 ul{
-  padding-top: 0px;
-  margin: 0px;
-  list-style-type: circle;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
+    list-style-type: circle;
 }
 
+li{
+    padding: 0px;
+    margin: 0px; 
+}
 
 @font-face {
     font-family: 'charterregular';

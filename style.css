@@ -28,6 +28,15 @@ p{
   text-align: justify;
 }
 
+#back{
+    padding: 20px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
+
 a{
   text-decoration: none;
   color: #000000;
