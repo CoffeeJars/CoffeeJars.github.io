@@ -11,55 +11,43 @@ body{
 }
 
 p{
-    margin-bottom: 0px;
-  font-family: 'charterregular';
-  line-height: 1.4;
-  text-align: justify;
-  -webkit-hyphens: auto;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: justify;
+    -webkit-hyphens: auto;
     -moz-hyphens: auto;
-  hyphens: auto;
+    hyphens: auto;
 }
 
 #main{
   padding: 20px;
-  max-width: 150px;
+  max-width: 450px;
   margin-left: auto;
   margin-right: auto;
   text-align: justify;
 }
 
-#back{
-    padding: 20px;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify;
-}
-
-
 a{
   text-decoration: none;
-  color: #000000;
+  color: black;
   background-color: whitesmoke;
 }
 
 a:hover{
-  background-color: lemonchiffon;
+  background-color: linen;
 }
 
 
 h1{
-  	font-family: 'charterregular';	
-	font-size: 32px;
-	letter-spacing: -1px;
-	padding: 0px;
- 	margin: 0px;
+  	font-family: 'CooperHewitt-Medium';	
+	font-size: 28px;
+    line-height: 1;
 }
 
 h2{
-  font-family: 'charterbold';
-  font-size: 32px;
-
+  font-family: 'CooperHewitt-Medium';
+	font-size: 22px;
+    line-height: 1;
 }
 
 ul{
@@ -74,23 +62,22 @@ li{
     margin: 0px; 
 }
 
+/* Custom fonts. Charter for body and CooperHewitt for headers */
+
 @font-face {
     font-family: 'charterregular';
-    src: url('charter_regular-webfont.eot');
-    src: url('charter_regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('charter_regular-webfont.woff') format('woff');
+    src: url('/Charter/charter_regular-webfont.eot');
+    src: url('/Charter/charter_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/Charter/charter_regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-
-
 
 @font-face {
-    font-family: 'charterbold';
-    src: url('charter_bold-webfont.eot');
-    src: url('charter_bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('charter_bold-webfont.woff') format('woff');
+    font-family: 'CooperHewitt-Medium';
+    src: url('/CooperHewitt/CooperHewitt-Medium.eot');
+    src: url('/CooperHewitt/CooperHewitt-Medium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
+
