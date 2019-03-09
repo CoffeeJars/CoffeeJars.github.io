@@ -27,26 +27,46 @@ p{
   text-align: justify;
 }
 
+.links{
+    max-height: 150px;
+    
+}
+
+
 a{
   text-decoration: none;
   color: black;
-  background-color: whitesmoke;
+  background-color: white;
 }
 
-a:hover{
-  background-color: linen;
-}
 
 
 h1{
-  	font-family: 'CooperHewitt-Medium';	
-	font-size: 28px;
+  font-family: 'charterregular';
+    color: black;
+	font-size: 30px;
     line-height: 1;
+    padding-bottom: 1px;
+    margin-bottom: 3px;
+}
+
+p.mon {
+    font-family: 'IBM Plex Mono', monospace;
+    float: left;
+    width: 33%;
+}
+
+b {
+    font-family: 'charterregular';
+    text-align: center;
 }
 
 h2{
-  font-family: 'CooperHewitt-Medium';
-	font-size: 22px;
+  font-family: 'charterregular';
+	font-size: 100px;
+    padding: 0px;
+    margin: 0px;
+    float: left;
     line-height: 1;
 }
 
@@ -69,14 +89,6 @@ li{
     src: url('/Charter/charter_regular-webfont.eot');
     src: url('/Charter/charter_regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('/Charter/charter_regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'CooperHewitt-Medium';
-    src: url('/CooperHewitt/CooperHewitt-Medium.eot');
-    src: url('/CooperHewitt/CooperHewitt-Medium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
