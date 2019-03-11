@@ -32,9 +32,28 @@ p{
     
 }
 
+table{
+    border: 1px solid black;
+    float: left;
+    margin: 10px;
+}
+
+td{
+    border: 1px solid black;  
+    height: 16px;
+    width: 10px;  
+}
+
+
+hr{
+    column-span: all;
+    text-align: center;
+    
+}
 
 a{
   text-decoration: none;
+padding: 0px;
   color: black;
   background-color: white;
 }
@@ -50,17 +69,6 @@ h1{
     margin-bottom: 3px;
 }
 
-p.mon {
-    font-family: 'IBM Plex Mono', monospace;
-    float: left;
-    width: 33%;
-}
-
-b {
-    font-family: 'charterregular';
-    text-align: center;
-}
-
 h2{
   font-family: 'charterregular';
 	font-size: 100px;
@@ -70,17 +78,13 @@ h2{
     line-height: 1;
 }
 
-ul{
-    padding-top: 0px;
-    padding-bottom: 0px;
+
+h3{
+  padding: 0px;
     margin: 0px;
-    list-style-type: circle;
+    
 }
 
-li{
-    padding: 0px;
-    margin: 0px; 
-}
 
 /* Custom fonts. Charter for body and CooperHewitt for headers */
 
