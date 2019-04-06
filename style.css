@@ -1,143 +1,21 @@
 /*
 Stylesheet for Stephen's Blog!
-Updated: Mar 22nd, 2019
+Updated: Apr 5th, 2019
 I hope I never edit this again.
 */
 
-/* h1. Used for site header/titles */
-h1{
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-}
-
-/*
-The main div, everything goes inside here!
-This should be the only thing with padding.
-I expanded the max-width from 450 -> 800px
-Note sure if this should go here:
-text-align: justify;
-*/
-#main{
-  padding: 0px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-.a1{
-    float: left;
-    padding: 0px;
-    margin: 0px;
-    background-color: aqua;
-    width: 600px;
-    height: 600px;   
-}
-.a2{
-    float: left;
-    padding: 0px;
-    margin: 0px;
-    background-color: tomato;
-    width: 371px;
-    height: 371px;   
-}
-
-.holder{
-    float: left;
-    padding: 0px;  
-    margin: 0px;
-    width: 229px;
-    height: 371px;  
-}
-
-.a3{
-    float: right;
-
- padding: 0px;
-margin: 0px;
-    background-color: palegreen;
-    width: 229px;
-    height: 229px;   
-}
-
-.a4{
-    float: right;
-    padding: 0px;
-    margin: 0px;
-    background-color: blue;
-    width:229px;
-    height:142px;
-    
-}
-
 body{
-  font-family: 'charterregular';
-  margin: 0px;
-  padding: 0px;
-  background-color: white;
-}
-
-p{
     font-size: 16px;
-    line-height: 1.4;
-    text-align: justify;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    hyphens: auto;
-}
-
-
-
-.links{
-    max-height: 150px;
-    
-}
-
-table{
-    border: 1px solid black;
-    float: left;
-    margin: 10px;
-}
-
-td{
-    border: 1px solid black;  
-    height: 16px;
-    width: 10px;  
-}
-
-
-hr{
-    column-span: all;
-    text-align: center;
-    
-}
-
-a{
-  text-decoration: none;
-padding: 0px;
-  color: black;
-  background-color: white;
-}
-
-
-
-h2{
-  font-family: 'charterregular';
-	font-size: 100px;
-    padding: 0px;
+    padding: 10px;
     margin: 0px;
-    float: left;
-    line-height: 1;
+
+}
+p{}
+a{
+    display: block;
+}
+h1 {
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
 }
 
-
-/*Custom fonts. Charter.*/
-
-@font-face {
-    font-family: 'charterregular';
-    src: url('/Charter/charter_regular-webfont.eot');
-    src: url('/Charter/charter_regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/Charter/charter_regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
