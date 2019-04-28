@@ -5,31 +5,15 @@ I hope I never edit this again.
 */
 
 body{
-    background-color: #fffaf7;
-    line-height: 1.3;
-    font-size: 18px;
+    font-family: "Lucida Console", monospace;	
+    font-size: 14px;
     margin: 0px;
 }
 
 #wordbox{
     max-width: 70ch;
     padding: 2ch;
-    margin: auto;
-    text-align: justify;
 }
 
-a{
-    display: block;
-    text-align: left;
-}
 
-h1 {
-    font-size: 28px;
-    font-family: 'Roboto', sans-serif;
-}
-
-h2{
-    font-size: 16px;
-}
-
-td{padding: 10px;}
+td{padding:10px;}
