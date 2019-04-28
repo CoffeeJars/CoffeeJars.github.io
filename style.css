@@ -11,6 +11,8 @@ body{
 }
 
 #wordbox{
+    overflow: hidden;
+    float: left;
     max-width: 70ch;
     padding: 2ch;
 }
