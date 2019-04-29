@@ -1,20 +1,21 @@
 /*
 Stylesheet for Stephen's Blog!
 Updated: Apr 5th, 2019
-I hope I never edit this again.
+I hope I never edit this again.    font-family: "Lucida Console", monospace;	
+
 */
 
 body{
-    font-family: "Lucida Console", monospace;	
+    font-family: "Courier New", monospace;
     font-size: 14px;
     margin: 0px;
+    
 }
 
 #wordbox{
-    overflow: hidden;
-    float: left;
-    max-width: 70ch;
+    max-width: 39ch;
     padding: 2ch;
+    text-align: justify;
 }
 
 a {
