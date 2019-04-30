@@ -24,7 +24,7 @@ a {
     text-decoration: none;
 }
 
-.til{text-align: center;
+.til{
   white-space: nowrap;
   overflow: hidden;
 }
