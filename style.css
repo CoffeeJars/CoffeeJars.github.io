@@ -16,11 +16,17 @@ body{
     max-width: 37ch;
     padding: 2ch;
     text-align: justify;
+    
 }
 
 a {
     color: black;
     text-decoration: none;
+}
+
+.til{text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 td{padding:10px;}
