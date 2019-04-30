@@ -13,8 +13,9 @@ body{
 }
 
 #wordbox{
-    max-width: 41ch;
-    padding: 2ch;    
+    max-width: 51ch;
+    padding: 1ch;  
+    margin: auto;
 }
 
 a {
