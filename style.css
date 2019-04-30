@@ -13,7 +13,7 @@ body{
 }
 
 #wordbox{
-    max-width: 51ch;
+    width: 51ch;
     padding: 1ch;  
     margin: auto;
 }
@@ -24,8 +24,7 @@ a {
 }
 
 .til{
-    width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
