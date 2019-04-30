@@ -7,15 +7,13 @@ I hope I never edit this again.    font-family: "Lucida Console", monospace;
 
 body{
     font-family: "Courier New", monospace;
-    font-size: 14px;
+    font-size: 13px;
     margin: 0px;
-    
 }
 
 #wordbox{
-    width: 51ch;
-    padding: 1ch;  
-    margin: auto;
+    width: 49ch;
+    padding: 2ch;  
 }
 
 a {
