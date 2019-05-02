@@ -6,14 +6,15 @@ I hope I never edit this again.    font-family: "Lucida Console", monospace;
 */
 
 body{
-    font-family: "Courier New", monospace;
-    font-size: 13px;
+    font-family: 'Inconsolata', monospace;
+    font-size: 17px;
     margin: 0px;
 }
 
 #wordbox{
-    width: 36ch;
-    padding: 2ch;  
+    margin: auto;
+    width: 70ch;
+    padding: 4ch;  
 }
 
 a {
@@ -21,8 +22,7 @@ a {
     text-decoration: none;
 }
 
-.til{
-    white-space: nowrap;
-    overflow: hidden;
-}
+
+ul {list-style-type: lower-roman;}
+
 
