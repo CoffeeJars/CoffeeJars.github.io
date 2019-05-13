@@ -1,29 +1,113 @@
 /*
 Stylesheet for Stephen's Blog!
-Updated: Apr 5th, 2019
-I hope I never edit this again.    font-family: "Lucida Console", monospace;	
-
+Updated: May 9th, 2019
 */
 
 body{
-    font-family: 'Inconsolata', monospace;
-    font-size: 17px;
+    font-size: 18px;
     margin: 0px;
+    line-height: 1.5;
+}
+
+h2{
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+    font-family: 'Inconsolata', monospace;
+}
+
+
+#logbox{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    padding: 40px;
+    
 }
 
 #wordbox{
-    margin: auto;
-    width: 70ch;
-    padding: 4ch;  
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 950px;
+    padding: 40px;
+}
+
+.chapters{
+    float: left;
+}
+
+h1{
+    line-height: 1;
+    font-family: 'charterbold';  
 }
 
 a {
+    display: block;
     color: black;
     text-decoration: none;
 }
 
 
-ul {list-style-type: lower-roman;}
+p {
+    max-width: 60ch;
+    text-align: left;
+}
+
+i{
+    font-family: 'charteritalic';
+}
+
+b{
+    font-family: 'charterbold';  
+}
+/* All the Charter fonts */
+/* Thanks to: https://practicaltypography.com/charter.html */
+@font-face {
+    font-family: 'charterregular';
+    src: url('/charter/charter_regular-webfont.eot');
+    src: url('/charter/charter_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/charter/charter_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'charterbold';
+    src: url('/charter/charter_bold-webfont.eot');
+    src: url('/charter/charter_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/charter/charter_bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'charteritalic';
+    src: url('/charter/charter_italic-webfont.eot');
+    src: url('/charter/charter_italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/charter/charter_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+
+}
 
 
 
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px;
+}
