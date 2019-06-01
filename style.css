@@ -1,71 +1,114 @@
 /*
 Stylesheet for Stephen's Blog!
-Updated: May 9th, 2019
+Updated: May 22th, 2019
 */
 
-body{
-    font-size: 18px;
-    margin: 0px;
-    line-height: 1.5;
+body {
+    font-size: 20px;
+    line-height: 1.3;
+    font-family: 'Cardo', serif;
+
+}
+
+
+h1 { 
+    letter-spacing: 0px;
+
+    font-family: "Helvetica Neue", 
+        Helvetica, Arial, sans-serif;
+    font-size: 38px;
+    font-weight: 400;
 }
 
 h2{
-    font-family: sans-serif;
-    font-size: 20px;
-}
+   letter-spacing: 0px;
 
-ul{
-    list-style: none;
-    padding-left: 0;
-    font-family: 'Inconsolata', monospace;
-}
-
-
-#logbox{
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 850px;
-    padding: 20px;
+    font-family: "Helvetica Neue", 
+        Helvetica, Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 400;  
     
 }
 
-#wordbox{
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 950px;
-    padding: 40px;
+
+h1:hover{
 }
 
-.chapters{
+.homebox{
+    padding-top: 0px;
+    padding: 30px;
     float: left;
+    max-width: 600px;
 }
 
-h1{
-    line-height: 1;
-    font-family: 'charterbold';  
+.photobox{
+    width: 450px;
+    float: left;
+    padding: 30px;
+    padding-bottom: 0px;
 }
 
-a {
-    display: block;
-    color: black;
-    text-decoration: none;
+.photo {
+    width: 100%;
+    
+}
+
+.cap{
+font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    
+    
 }
 
 
-p {
-    max-width: 60ch;
-    text-align: left;
+  a {
+      text-decoration: none;
+      color: black;
+      background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #EBEDEF 50%);
+      outline: 0;
+  }
+  a:hover {
+      background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #D4E6F1 50%);
 }
 
-i{
-    font-family: 'charteritalic';
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+hr {
+  border: 2px solid #ddd;
+  margin: 2rem auto;
+}
+#fn {
+  font-size: 85%;
+}
+footer {
+  margin-top: 2rem;
+  text-align: center;
 }
 
-b{
-    font-family: 'charterbold';  
+
+* {
+  box-sizing: border-box;
 }
-/* All the Charter fonts */
-/* Thanks to: https://practicaltypography.com/charter.html */
+
+.row {
+  display: flex;
+}
+
+
+
+/* Create two equal columns that sits next to each other */
+.column {
+    max-width: 400px;
+    text-align: justify;
+  padding: 10px;
+}
+
+
+/*
+Fonts!
+*/
 @font-face {
     font-family: 'charterregular';
     src: url('/charter/charter_regular-webfont.eot');
@@ -91,23 +134,4 @@ b{
     font-weight: normal;
     font-style: italic;
 
-}
-
-
-
-
-
-
-* {
-  box-sizing: border-box;
-}
-
-.row {
-  display: flex;
-}
-
-/* Create two equal columns that sits next to each other */
-.column {
-  flex: 50%;
-  padding: 10px;
 }
