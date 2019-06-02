@@ -1,3 +1,3 @@
 # sdunc.github.io
 
-I guess I like brutalism a little too much.
+Look, I finally made a decent site! 
