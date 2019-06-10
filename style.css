@@ -32,24 +32,76 @@ h3{
     font-weight: 400;  
 }
 
-/* Squares look nice with bold sans serifs */
+/* Squares look nice with bold sans serifs 
 ul{
     list-style: square;   
+}
+*/
+ul{
+    list-style: none;
+    font-size: 16px;
+    font-family: 'IBM Plex Mono', monospace;
+    display: block;
+    padding: 0;
+}
+
+/* Holds home and photo box*/
+.boxbox{
+    padding-top: 30px;
+    margin: auto;
+    max-width: 800px;
+}
+/* Holds the text on /about.html */
+.aboutbox{
+    padding-top: 0px;
+    padding: 15px;
+    float: left;
+    max-width: 450px;
 }
 
 /* Holds the text on /index.html */
 .homebox{
-    padding-top: 0px;
-    padding: 30px;
-    float: left;
-    max-width: 600px;
+    max-width: 500px;
+    margin: auto;
+    padding: 60px 30px 60px 30px;
+}
+
+/* Header div */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 10px;
+}
+
+.header ul {
+    font-family: 'IBM Plex Mono', monospace;
+    margin-top: 10px;
+    list-style: none;
+    display: block;
+}
+
+.header ul li {
+    display: inline;
+    padding: 0;
+    padding-left: 5px;
+}
+
+.nowbox {
+    padding-top: 30px;
+    margin: auto;
+    max-width: 200px;
+}
+
+.date{
+    color: #272727;
 }
 
 /* Holds the photo and caption on index.html */
 .photobox{
-    width: 280px;
+    width: 260px;
     float: left;
-    padding: 30px;
+    padding: 15px;
     padding-bottom: 0px;
 }
 
@@ -95,7 +147,7 @@ ul{
     width: 50%;
 }
 
-/* Style for links. Half highlighted. */
+/* Style for links. Half highlighted.
 a {
     text-decoration: none;
     color: black;
@@ -106,3 +158,10 @@ a {
 a:hover {
     background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #FCF3CF 50%);
 }
+*/
+
+a {
+    color: #1A0DAB;
+    text-decoration: none;
+}
+    
