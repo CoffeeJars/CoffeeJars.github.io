@@ -28,8 +28,9 @@ h3{
     padding: 0px;
     margin: 0px;
     font-family: "Helvetica Neue", Arial, sans-serif;
-    font-size: 20px;
-    font-weight: 400;  
+    font-size: 18px;
+    font-weight: 700; 
+    text-transform: uppercase;
 }
 
 /* Squares look nice with bold sans serifs 
@@ -97,6 +98,11 @@ ul{
     color: #272727;
 }
 
+.title{
+    font-weight: bold;
+}
+
+
 /* Holds the photo and caption on index.html */
 .photobox{
     width: 260px;
@@ -111,11 +117,17 @@ ul{
 }
 
 /* Used for the /challenge.html page (or blogs?) */
-.leftbox{
-    max-width: 800px;
-    float: left;
+.box{
+    max-width: 600px;
+    margin: auto;
     padding: 30px;
     font-size: 16px;
+}
+
+.bookcover{
+    float: right;
+    padding: 20px;
+    width: 200px;
 }
 
 /* Set the font to monospace for captions*/
