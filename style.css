@@ -1,178 +1,114 @@
 /*
 Stylesheet for Stephen's Blog!
-Updated: June 3rd, 2019
+Updated: July 6th, 2019
 */
 
-body {
-    font-size: 18px;
-    line-height: 1.5;
-    font-family: 'Cardo', serif;
+body{
+    color: #333333;     /* Less contrast = better readability? */
+    padding-left: 2%;       /* Not sure if this is the padding im sticking with*/
+    padding-right: 2%;
+    font-size: 18px; 
+    line-height: 1.3;
 }
 
-/* Styles for headers */
-h1 { 
-    padding-top: 0px;
-    margin-top: 0px;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    font-size: 30px;
-    font-weight: 500;
+p{
 }
 
 h2{
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    font-size: 24px;
-    font-weight: 500;     
-}
-
-h3{
     padding: 0px;
     margin: 0px;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 700; 
-    text-transform: uppercase;
 }
 
-/* Squares look nice with bold sans serifs 
-ul{
-    list-style: square;   
-}
-*/
-ul{
-    list-style: none;
-    font-size: 16px;
-    font-family: 'IBM Plex Mono', monospace;
-    display: block;
-    padding: 0;
+h3 {
+    padding: 0px;
+    margin: 0px;    
 }
 
-/* Holds home and photo box*/
-.boxbox{
-    padding-top: 30px;
-    margin: auto;
+ul {
+    list-style: square; /* The square looks the best*/
+    
+}
+
+#flexbox {              /* The parent (flex container) holds children */
     max-width: 800px;
-}
-/* Holds the text on /about.html */
-.aboutbox{
-    padding-top: 0px;
-    padding: 15px;
-    float: left;
-    max-width: 450px;
-}
-
-/* Holds the text on /index.html */
-.homebox{
-    max-width: 500px;
     margin: auto;
-    padding: 60px 30px 60px 30px;
+    display: flex; 
+    flex-flow: row wrap;
 }
 
-/* Header div */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding-bottom: 10px;
-}
-
-.header ul {
-    font-family: 'IBM Plex Mono', monospace;
-    margin-top: 10px;
-    list-style: none;
-    display: block;
-}
-
-.header ul li {
-    display: inline;
-    padding: 0;
-    padding-left: 5px;
-}
-
-.nowbox {
-    padding-top: 30px;
+#homebox {              /* The parent (flex container) holds children */
+    max-width: 700px;
     margin: auto;
-    max-width: 200px;
-}
-
-.date{
-    color: #272727;
-}
-
-.title{
-    font-weight: bold;
+    display: flex; 
+    flex-flow: column;
 }
 
 
-/* Holds the photo and caption on index.html */
-.photobox{
-    width: 260px;
-    float: left;
-    padding: 15px;
-    padding-bottom: 0px;
+#flexbox > * {          /* We tell all items to be 100% width, via flex-basis */
+  flex: 1 100%;
 }
 
-/* Sets photo's width to 100% of .photobox */
-.photo {
+#header {               /* The first child under #flexbox */
+    padding: 20px;
+}
+
+#cover {                /* When the screen is big */
+    flex: 30%;
+    padding: 20px;
+}
+
+img{
     width: 100%;
 }
 
-/* Used for the /challenge.html page (or blogs?) */
-.box{
-    max-width: 600px;
-    margin: auto;
-    padding: 30px;
-}
-
-.bookcover{
-    float: right;
+#content {
+    flex: 50%;
     padding: 20px;
-    width: 200px;
 }
 
-/* Set the font to monospace for captions*/
-.cap{
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;  
+#footer {
+    text-align: right;
+    padding: 5px;
+    font-size: 14px;
+    order: 5;
 }
 
-/* Tagline and tagline 2 div is for the bottom corner display*/
-.tagline{
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
+#sidebar {
+    flex: 40%;
+    padding: 20px;
 }
 
-.tagline:hover .tagline2 {
-    display: block;
+
+/* small screens */
+@media all and (max-width: 700px) {
+  /* We tell both sidebars to share a row */
+    #flexbox{
+       flex-direction: column;
+    }
 }
 
-.tagline2 {
-    display: none;
+/* small screens */
+@media all and (max-width: 550px) {
+  /* We tell both sidebars to share a row */
+    #flexbox{
+       flex-direction: column;
+    }
+    body {
+        padding: 0px;
+        margin: 0px;
+    }
+    #cover{
+        order: 1;
+        padding: 0px;
+        height: 100%;
+    }
+    #header{
+        order: 0;
+    }
+    #content{
+        order: 2;
+    }
+    #footer{
+        order: 3;
+    }
 }
-
-/*The son div is a 50% column inside other divs*/
-.son {
-    float: left;
-    width: 50%;
-}
-
-/* Style for links. Half highlighted.
-a {
-    text-decoration: none;
-    color: black;
-    background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #EBEDEF 50%);
-    outline: 0;
-}
-
-a:hover {
-    background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #FCF3CF 50%);
-}
-*/
-
-a {
-    color: #1A0DAB;
-    text-decoration: none;
-}
-    
