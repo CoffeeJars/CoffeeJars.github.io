@@ -1,121 +1,29 @@
 /*
 Stylesheet for Stephen's Blog!
-Updated: July 6th, 2019
+Updated: Apr 5th, 2019
+I hope I never edit this again.
 */
 
-body{
-    color: #333333;             /* #333 has less contrast than 000 */
-    font-size: 1.3em;           /* Changed font from px to em. Should look better on phones. */ 
-    line-height: 1.3;
+body {
+    font-size: 18px;
 }
 
 p{
+    margin-left: 2cm;
+    margin-right: 2cm;
+    max-width: 750px;
 }
 
-.caption {
-    padding: 0px;
-    margin: 0px;
-    display: inline;
+h1 {
+    font-family: 'Lato', sans-serif;
 }
 
-h1{padding-bottom: 0px;
-margin-bottom: 0px;}
-
-h2{
-    padding: 0px;
-    margin: 0px;
-}
-
-h3 {
-    padding: 0px;
-    margin: 0px;    
-}
-
-ul {
-    list-style: square; /* The square looks the best*/
-    
-}
-
-#flexbox {              /* The parent (flex container) holds children */
-    max-width: 800px;
-    margin: auto;
-    display: flex; 
-    flex-flow: row wrap;
-}
-
-#homebox {              /* The parent (flex container) holds children */
-    max-width: 700px;
-    margin: auto;
-    display: flex; 
-    flex-flow: column;
-}
-
-
-#flexbox > * {          /* We tell all items to be 100% width, via flex-basis */
-  flex: 1 100%;
-}
-
-#header {               /* The first child under #flexbox */
-    padding: 20px;
-}
-
-#cover {                /* When the screen is big */
-    flex: 30%;
-    padding: 20px;
-}
-
-img{
-    width: 100%;
-}
-
-#content {
-    flex: 50%;
-    padding: 20px;
-}
-
-#footer {
-    text-align: right;
+pre {
     padding: 5px;
-    font-size: .75em;
-    order: 5;
-}
-
-#sidebar {
-    flex: 40%;
-    padding: 20px;
+    font-family: 'Inconsolata', monospace;
+    background-color: #f6f2ef;
+    font-size: 14px;
+    overflow: hidden;
 }
 
 
-/* medium screens */
-@media all and (max-width: 700px) {
-  /* We tell both sidebars to share a row */
-    #flexbox{
-       flex-direction: column;
-    }
-}
-
-/* small screens */
-@media all and (max-width: 550px) {
-  /* We tell both sidebars to share a row */
-    #flexbox{
-       flex-direction: column;
-    }
-    body {
-        padding: 0px;
-        margin: 0px;
-    }
-    #cover{
-        order: 1;
-        padding: 0px;
-        height: 100%;
-    }
-    #header{
-        order: 0;
-    }
-    #content{
-        order: 2;
-    }
-    #footer{
-        order: 3;
-    }
-}
