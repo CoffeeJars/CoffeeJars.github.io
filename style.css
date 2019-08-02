@@ -5,8 +5,7 @@ I hope I never edit this again.
 */
 
 body {
-    font-size: 1.2em;
-
+    font-size: 1.3em;
 }
 
 p{
@@ -52,6 +51,8 @@ pre {
     body{
         padding: 0px;
         margin: 0px;
+        font-size: 1.5em;
+
     }
     
     h1{
