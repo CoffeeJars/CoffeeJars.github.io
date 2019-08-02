@@ -6,6 +6,7 @@ I hope I never edit this again.
 
 body {
     font-size: 18px;
+
 }
 
 p{
@@ -26,4 +27,35 @@ pre {
     overflow: hidden;
 }
 
+.topphoto{
+    margin-left: 2cm;
+    margin-right: 2cm;   
+    width: 250px; 
+    height: auto;
+}
 
+
+
+@media screen and (min-width:320px) and (max-width:640px) {
+  /* for screens that are at least 320 pixels wide but less than or equal to 640 pixels wide */
+    
+    p{
+        margin-left: 1cm;
+        margin-right: 1cm;
+    }
+    .topphoto{
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%; 
+        height: auto;
+    }
+    body{
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    h1{
+        padding: 10px;
+    }
+    
+}
