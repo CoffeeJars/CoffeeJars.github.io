@@ -1,38 +1,165 @@
 <!doctype html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-<link rel="icon" href="icon.png">
-<link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i&display=swap" rel="stylesheet">
-    <title>Stephen Duncanson</title>
-  </head>
-  <body>
-    <div class="content">
-    <header>
-      <h2>stephen duncanson</h2>
-        <img src="me.png" class=me>
-      <div class="links">
-        <a href="index.html">home</a>
-        <span class="bar">|</span>
-        <a href="blog.html">blog</a>
-        <span class="bar">|</span>
-        <a href="mailto:me@stephlog.com">email</a>
-      </div>
-    </header>
-        <!-- <p>Currently I am an undergraduate physics major at the <a href="https://uconn.edu/"University of Connecticut</a>.</p> -->
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81871818-3"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-        <!-- <p>Last summer I worked as an -->
-        <p>Currently I'm an intern at <a href="https://www.racecoastal.com/" target="_blank">RACE Coastal Engineering</a>. I've developed <a href="https://github.com/sdunc/Heatmap" target="_blank">algorithms</a> to create polygonal & gaussian heat maps, as well as <a href="https://github.com/sdunc/Wave-Calcs">numerical methods</a> to solve wave dispersion equations.</p><!-- I've also created interactive web content, and in-house project mapping software. -->
-        
-        <p>I studied Computer Science at <a href="https://www.southernct.edu/" target="_blank">SCSU</a> for two years. I was a peer mentor, a <a href="http://www2.southernct.edu/academics/schools/arts/departments/mathematics/Classes/emporium.html">mathematics tutor</a>, and worked briefly with the graduate school of <a href="https://www2.southernct.edu/academics/schools/education/departments/edl/InternalEDLStudents/index.html" target="_blank">educational leadership</a> on web development.</p>
-        
-        <p>During the summer of 2018 I worked as an intern for the CT <a href="https://www.ct.gov/deep/site/default.asp" target="_blank">Department of Energy and Environmental Protection</a>.</p>
+          gtag('config', 'UA-81871818-3');
+        </script>
 
-        <!-- <p>I have changed the style of my website over x times. You can view them <a href="">here</a>.</p> -->
+<style type="text/css">/*
+Stylesheet for Stephen's Blog!
+Updated: June 3rd, 2019
+*/
+
+body {
+    font-size: 18px;
+    line-height: 1.3;
+    font-family: 'Cardo', serif;
+}
+
+/* Styles for headers */
+h1 { 
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 28px;
+    margin: 0px;
+}
+
+h2{
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 500;     
+}
+
+h3{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 400;  
+}
+
+/* Squares look nice with bold sans serifs */
+ul{
+    list-style: square;   
+}
+
+/* Holds the text on /index.html */
+.homebox{
+    max-width: 550px;
+    padding: 30px;
+    float: left;
+    margin: 0px;
+
+}
+
+/* Holds the photo and caption on index.html */
+.photobox{
+    width: 270px;
+    float: left;
+    padding: 30px;
+    display: inline;
+    margin: 0px;
+}
+
+#boxholder {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1000px;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+/* Sets photo's width to 100% of .photobox */
+.photo {
+    width: 100%;
+
+}
+
+/* Used for the /challenge.html page (or blogs?) */
+.leftbox{
+    max-width: 800px;
+    float: left;
+    padding: 30px;
+    font-size: 16px;
+}
+
+/* Set the font to monospace for captions*/
+.cap{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;  
+}
+
+/* Tagline and tagline 2 div is for the bottom corner display*/
+.tagline{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+}
+
+.tagline:hover .tagline2 {
+    display: block;
+}
+
+.tagline2 {
+    display: none;
+}
+
+/*The son div is a 50% column inside other divs*/
+.son {
+    float: left;
+    width: 50%;
+}
+
+/* Style for links. Half highlighted. */
+a {
+    text-decoration: none;
+    color: black;
+    background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #EBEDEF 50%);
+    outline: 0;
+}
+
+a:hover {
+    background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #feefee 50%);
+}
+</style>
+
+        <link href="https://fonts.googleapis.com/css?family=Cardo|IBM+Plex+Mono&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/style.css"> 
+        <meta name="viewport" content="width=450" />
+        <link rel="icon" href="photos/icon.png" />
+        <title>Stephen Duncanson</title>
+    </head>
+    <body>
+    <div id="boxholder">
+        <div class="photobox">
+            <img class="photo" src="photos/brothers.png">
+            <text class="cap">L⇢R Me, Peter, Paul</text>
+        </div>
+        <div class="homebox">
+        <h1>Stephen Duncanson</h1>
+        <p>Physics major, <a href="https://uconn.edu/"target="_blank">University of Connecticut</a>.</p>
+
+        <p>Last summer I interned at <a href="https://www.racecoastal.com/" target="_blank">RACE Coastal Engineering</a>. I developed <a href="https://github.com/sdunc/Wave-Calcs"target="_blank">numerical methods</a> to solve wave dispersion equations. I created a program to search & retrieve historical aerial photography.</p>
+
+
+        
+        <p>Before transferring to Uconn, I studied computer science at <a href="https://www.southernct.edu/" target="_blank">SCSU</a> for two years. I was a <a href="http://www2.southernct.edu/offices/first-year-experience/peermentoring.html" target="_blank">peer mentor</a>, a <a href="http://www2.southernct.edu/academics/schools/arts/departments/mathematics/Classes/emporium.html"target="_blank">mathematics tutor</a>, and worked with the graduate school of <a href="https://www2.southernct.edu/academics/schools/education/departments/edl/InternalEDLStudents/index.html" target="_blank">educational leadership</a> on web development.</p>
+        
+        <p>During the summer of 2018 I worked with the Connecticut <a href="https://www.ct.gov/deep/site/default.asp" target="_blank">Department of Energy and Environmental Protection</a>.</p>
+
+        <p>I have an informal <a href="blog.html"target="_blank">blog</a>, and a <a href="books.html" target="_blank">booklog</a>.</p>
+
+        </div>
     </div>
-    <div id="footer">
-    </div>
-  </body>
+    </body>
 </html>
+
+    
+
