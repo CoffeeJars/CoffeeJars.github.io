@@ -83,6 +83,11 @@ a{
   background-color: #f2f3f4;
 }
 
+p.mon {
+    font-family: 'IBM Plex Mono', monospace;
+    float: left;
+    width: 33%;
+}
 
 #footer{
 font-family: 'IBM Plex Mono', monospace;
