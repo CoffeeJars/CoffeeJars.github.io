@@ -1,111 +1,111 @@
-/*
-Stylesheet for Stephen's Blog
-Updated: December 20th 2018
-*/
 body {
-  font-family: serif;
-  padding: 0px;
-  margin: 0px;
-  color: #000000;
-  font-size: 18px;
-  background-color: #f2f3f4;
-  line-height: 1.4;
+    font-size: 18px;
+    line-height: 1.3;
+  font-family: 'Cardo', serif;
+    color: #342D33;
+    padding: 0px;
+    margin: 0px;
 }
 
-
-
-.me {
-    float: right;
-  margin: 10px;
-  padding: 0px;
-  width: 110px;
-  border: 1px solid black;
-}
-
-.content{
-  padding: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 600px;
-  min-height: 100vh;
+/* Styles for headers */
+h1 { 
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 28px;
+    margin: 0px;
 }
 
 h2{
-    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;    
-  display: inline;
-  font-size: 22px;
-  font-weight: 700;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 34px;
 }
 
-h3 a{
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;    
-  display: inline;
-  font-size: 18px;
-  text-decoration: none;
-}
-
-.links {
-    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;    
-  font-weight: bold;
-  font-size: 14px;
-  list-style-type: none;
-  padding: 0px;
-  text-decoration: none;
-  color: #bdc3c7;
-}
-
-.links a {
-  text-decoration: none;
-  color: #939ba3;
+h3{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 400;  
 }
 
 
-.bar{
-  color: #ccc;
-  padding-left: 1px;
-  padding-right: 1px;
- }
-
-.tab {margin-top: 0px; margin-bottom: 0px; margin-left: 40px; }
-
-.code {
-  padding: 10px;
-  padding-top: 0px;
-  font-family: 'IBM Plex Mono', monospace;
-  background-color: #f2f3f4;
-  font-size: 14px;
-  overflow: hidden;
-}
-
-
-a{
-  color: #000;
-  background-color: #f2f3f4;
-}
-
-p.mon {
-    font-family: 'IBM Plex Mono', monospace;
+/* Holds the text on /index.html */
+.homebox{
+    max-width: 450px;
+    padding: 30px;
     float: left;
-    width: 33%;
+    margin: 0px;
+
 }
 
-#footer{
-font-family: 'IBM Plex Mono', monospace;
-  height: 50px;
-  padding-right: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #bdc3c7;
-  text-align: right;
-
-  /*dadddf; */
+/* Holds the photo and caption on index.html */
+.photobox{
+    width: 300px;
+    float: left;
+    padding: 30px;
+    display: inline;
+    margin: 0px;
 }
 
-.footer_paragraph{
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 12px;
-  padding: 0px;
-  margin: 0px;
-  display: inline;
-  text-align: right;
+#boxholder {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 900px;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+/* Sets photo's width to 100% of .photobox */
+.photo {
+    width: 100%;
+
+}
+
+
+/* Set the font to monospace for captions*/
+.cap{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;  
+}
+
+
+/* Style for links. Half highlighted. */
+a {
+    text-decoration: none;
+    color: #222222;
+    background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #EBEDEF 50%);
+    outline: 0;
+}
+
+a:hover {
+    background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #e0e0ff 50%);
+}
+
+
+
+@media screen and (max-width: 600px) {
+/* Holds the text on /index.html */
+.homebox{
+    max-width: 550px;
+    padding: 15px;
+    float: left;
+    margin: 0px;
+    font-size: 20px;
+
+}
+
+/* Holds the photo and caption on index.html */
+.photobox{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 0px;
+}
+
+#boxholder {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1000px;
+    padding: 30px;
+    min-height: 100vh;
+}
+
 }
