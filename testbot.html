@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81871818-3"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-81871818-3');
+        </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Cardo|IBM+Plex+Mono&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=450" />
+        <link rel="icon" href="icon.png" />
+        <title>Reddit Bot</title>
+    </head>
+    <body>
+        
+    <div id="blogbox">
+        <h2>The UConn Bookstore Reddit Bot</h2>
+        <text class="cap3">
+        Stephen Duncanson<br>
+        December 24, 2019</text>
+        <p>As if paying <a href="https://www.courant.com/news/connecticut/hc-news-uconn-tuition-increase-20191211-vfccyhknmrgdrdc52wtse3vo2e-story.html"target="_blank">ever increasing</a> tuition was not enough, the UConn bookstore has taken it upon itself to spam each and every student with <i>deals</i>.</p>
+        <p>Here are some of those <i>deals</i> in an array: </p>
+        <div class="code">
+        <pre>
+deals = ["Microsoft Office 2019 only $39.95 | Adobe & more.",
+		"Shop 2019 holiday ornaments before they're gone…",
+		"Savings, Savings, & Savings for YOU!",
+		"🎁 Our GIFT to you: 25% OFF",
+		"Happy Thanksgiving!! Give $10 to your parents",
+		"Happy Thanksgiving!! Thank Your Parents With $10",
+		"HURRY! 30% Off Cold Weather Styles Is Almost GONE",
+		"ENDS TODAY: 30% off Sweats & More",
+		"30% off is happening now!! (Yes…30% off!)",
+		"Pre-Black Friday Deals are HERE!",
+		"Your FIRST LOOK at Cyber Deals 😄",
+		"LAST CHANCE to shop our Champion Sale!!",
+		"🏈 We face East Carolina Soon!",
+		"Your favorite brands are STILL on sale!",
+		"Sustainable styles you'll love. . .",
+		"🍂 25% Off Fall Savings!",
+		"Understand your world as you shape it with The Times.",
+		"Introducing: UCONN x tokyodachi®",
+		"20% off Active Gear for the New School Year"
+		"Gifts starting at $10 now in your Urban Outfitters campus shop",
+		"Things to do before you leave campus…",
+		"Here is your Finals Week Checklist…",
+		"Microsoft Office 2019 only $39.95 | Adobe & more.",
+		"Shop 2019 holiday ornaments before they're gone…",
+		"Savings, Savings, & Savings for YOU!",
+		"😎 MORNING CYBER SUNDAY SAVINGS"]
+        </pre>
+        </div>
+        <p>I wrote a very simple python bot using the <a href="https://praw.readthedocs.io/en/latest/"target="_blank">praw</a> (Python Reddit API Wrapper) library, so that these unbeatable <i>deals</i> could be better shared with the student body!</p>
+<div class="code">
+<pre>
+#stephen duncanson
+#stephen.duncanson@uconn.edu
+
+reddit = praw.Reddit(client_id='',
+                     client_secret='',
+                     password='',
+                     user_agent='',
+                     username='')
+
+subreddit = reddit.subreddit('uconn')
+
+while True:
+	new_uconn = subreddit.new(limit=1)
+	for submission in new_uconn:
+		time.sleep(600)
+		print(submission.title)
+		submission.reply(random.choice(deals))
+		print("Replied!")
+</pre>        
+</div>
+        <p>And that's it! Enjoy the deals ;)</p>
+        <h4><a href="http:\\www.stephlog.com">Home</a></h4>
+        
+        </div>
+    </body>
+</html>
+
+    
+
