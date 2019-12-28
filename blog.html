@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81871818-3"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-81871818-3');
+        </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Cardo|IBM+Plex+Mono&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=450" />
+        <link rel="icon" href="icon.png" />
+        <title>stephlog</title>
+    </head>
+    <body>
+        
+    <div id="blogbox">
+        <h2>Retrieving Historical Aerial Photography</h2>
+        <text class="cap3">
+        Stephen Duncanson<br>
+        November 29, 2019</text>
+        <h3>What?</h3>
+        <p>Hap.py is a python program I wrote which accepts a Connecticut state address and returns all available aerial photography over that location.</p>
+        
+        <h3>Why?</h3>
+        <p>The first implementation of hap.py was written during the summer of 2019 while I was an intern at <a href="https://www.racecoastal.com/" target="_blank">RACE Coastal Engineering</a>. Historical photography is very important to Engineering companies: It gets used for everything from permiting to assembling bidding packages. Unfortunatly the interactive maps hosted by <a href="http://magic.lib.uconn.edu/mash_up/1934_aerial_index.html">UConn MAGIC</a> (Map and Geographic Information Center), were (are?) broken. I took it upon myself to write a program which would accept an address and return the associated aerial photography. </p>
+        <p>While on winter break I thought it would be a good idea to expand on my idea and create a way for anyone to access historical photography. </p>
+        
+        <h3>How? (technical brief)</h3>
+        <p>Parsing .kml files, creating a list of tuples: <text class="icode">((lat,long),url-to-pdf)</text> for each year, geocoding an entered address and using kdtrees to do time efficient nearest neighbor lookup between the geocoded address and the coordinates ripped (and corrected!) from the .kml files. </p>
+
+        <p>If you want the long version, read on!<br> If you just want to look at the code, view on <a href="">Github</a>.</p>
+                
+        <h3>History & KML Parsing</h3>
+        <h4>What is a kml file?</h4>
+        <p>According to the <a href="https://developers.google.com/kml/documentation/kml_tut"target="_blank">Google developer documentation</a>, "KML is a file format used to display geographic data in an Earth browser such as Google Earth."</p>
+        <p>An example is shown below.</p>
+        <img src="polygon.png"class="photo">
+        <text class="cap">Extruded polygons and placemarks on the Google campus. Source: <a href="https://developers.google.com/kml/documentation/KML_Samples.kml">SamplesInEarth.kml</a></text>
+        <p>Another project of mine (also at RACE) was creating kml polygonal heatmaps from lists of <text class="icode">(lat,long)</text> coordinates. An example of this is shown below using randomly generated coordinates: <text class="icode">random.uniform(41,42), random.uniform(-71,-72)</text> and 1-mile side lengths. </p>
+        <img src="heatmap.png"class="photo">
+        <text class="cap">Polygonal heatmap generated from randomly generated latitude and longitude pairs around CT. Source: <a href="https://github.com/sdunc/heatmaps/blob/master/heat.py"target="_blank">heat.py</a>. kml file: <a href="https://github.com/sdunc/heatmaps/blob/master/test.kml"target="_blank">test.kml</a></text>
+        <p>This heatmap program was heavily inspired by Mark Polczynski and Michael Polczynski's paper: <a href="https://www.researchgate.net/publication/260839255_A_Microsoft_VBA_Application_for_Generating_Heat_Maps"target="_blank">A Microsoft VBA Application for Generating Heat Maps</a>, in which they analyze the 17th century frontier between the Polish/Lithuanian Commonwealth and the Ottoman Empire. I reimplemented their algorithm in python for increased speed and flexibility.</p>
+        
+        <p>In both cases the steps are the same:
+            <ol>
+        <li>Generate a grid of geographical regions</li>
+        <li>Calculate a `g` grid attribute value for each square</li>
+        <li>Build KML polygon layer, coloring squares accoridng to their `g` values</li>
+        </ol></p>
+        
+        <p>Each 'square' has a `g` value defined as: </p>
+            <center>
+            `g_{i} = sum_(j=1)^N p_{j} e^{-\frac{d_{ij}^{2}}{r^{2}}`
+            </center>
+        <p>Where `N` is the number of squares on the map, `p_{j}` is a constant denoting the <i>weight</i> of the point (in the case of the heatmap `p_{j} = 1`), `d_{ij} ` is the distance between the center of the square and the set of coordinates, and `r^{2}` is what the paper calls the <i>grid range</i> which changes the look of the heatmap. </p>
+        <p>Eventually this will be given proper treatment, for now it serves to illustrate the power of KML. There are myriad improvements which could be done to my program (a kdtree for starters). </p>
+        <p>We have seen how KML files look when opened with Google earth, but what do these files look like on a more fundamental level? </p>
+        <p>Below is a screenshot of an average KML file opened with the MacOS TextEdit program.</p>
+        <img src="astxt.png"class="photoboxed">
+        <text class='cap'>A KML file opened with the TextEdit program. Ignore the red underlines.</text>
+        <p>Again quoting from Google here: "KML uses a tag-based structure with nested elements and attributes and is based on the XML standard. All tags are case-sensitive and must appear exactly as they are listed in the KML Reference. The Reference indicates which tags are optional. Within a given element, tags must appear in the order shown in the Reference."</p>
+        
+        <h4>Why are we talking about KML files?</h4>
+        <p>As I stated above the interactive maps hosted by <a href="http://magic.lib.uconn.edu/mash_up/1934_aerial_index.html">UConn MAGIC</a> are broken, yet the KML files which serve as the source material for them are free and <a href="http://magic.lib.uconn.edu/connecticut_data.html#aerial"target="_blank">easily available</a>. To create a program which can retrieve histroical photography we must first extract pertinent information from these files.</p>
+        <p>The UConn MAGIC site contains 11 aerial photography surveys of the state, and 3 at a county level: 
+        <ul>
+        <li>1957: Middlesex Counties</li>
+        <li>1963: Tolland, New London, and Windham Counties</li>
+        <li>1969: New London, Tolland and Windham Counties</li>
+        </ul>    
+        </p>
+
+        <p>This program will focus on the statewide surveys. The reduction process for each state survey KML file is detailed below.</p>
+        
+        <h4>1934</h4>
+        <h4>1952</h4>
+        <h4>1965</h4>
+        <h4>1970</h4>
+        <h4>1986</h4>
+        <h4>1990</h4>
+        <h4>1995</h4>
+        <h4>2004</h4>
+        <h4>2006</h4>
+        <h4>2008</h4>
+        <h4>2010</h4>
+        <h3>Next Steps</h3>
+        <p>There are a ton of ways to expand upon this. I list some of these below:</p>
+        <ol>
+            <li><b>Setting up the Raspberry Pi.</b> Eventually I would like to run these bots off of my raspberry pi for 24/7 uptime.</li>
+            <li><b>Improved web interface. </b>I happen to be a very poor web developer. I would love to see what a real developer could do with this idea. Interactive maps?</li>
+            <li><b>Historical flight simulator. </b>Google earth includes a flight simulator mode! The images could be downloaded en masse, stitched togehter, and overlayed onto google earth and released as a .kml file. </li>
+            <li><b>Better KML parsing with pyKML. </b>Pretty self explanatory. The <a href="https://pythonhosted.org/pykml/"target="_blank">pyKML</a> package provides better tools to parse .kml files. Using this library would be much better than using my 'spit-and-prayers' parsing tools.</li>
+        </ol>
+
+        
+        
+        
+        
+        </div>
+    </body>
+</html>
+
+    
+
