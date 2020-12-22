@@ -64,53 +64,48 @@ The single column in the center of the page
 }
 
 .col{
-     max-width: 790px;
-     padding-left: 100px;
-     padding: 40px;
+    font-family: 'Charter-Regular', serif;
+    max-width: 790px;
+    padding-left: 100px;
+    padding: 40px;
 }
 
 
 a {
+    color: #342D33;
     text-decoration: none;
     border-radius: 15px;
-    border: 1.5px dotted #c4b9b7;
+    border: 1px dotted #342D33;
 }
 
 a:hover {
+        color: #342D33;
+
   background: #fdfaf9;
 }
 
-.hellobox{
-
-        padding: 0px;
-        margin: 40px;
-        border-radius: 10px;
-        padding-bottom: 0px;
-        margin-bottom: 0px;
-        background-color: #e3c291;
-   }
-   .imgbox{
+.imgbox{
     width: 400px;
     padding: 10px;
     float: right;
    }
+
 h1{
-    font-style: italic;
-    letter-spacing: -2px;
-    font-size: 54px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1;
+    font-size: 60px;
     color: #312e2d; 
     margin: 0px;
     padding: 0px;
 }
 
 h2{ 
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: bolder;
-    letter-spacing: -2px;
-    line-height: .7;
-
     font-size: 32px;
     margin: 0px;
+        padding: 0px;
+
 }
 
 h3 {
@@ -120,7 +115,7 @@ h3 {
 }
 
 .rsheader {
-        font-family: RuneScape-Quill;
+    font-family: 'Charter-Regular', serif;
         font-size: 70px;
         margin: 0px;
         padding: 0px;
@@ -282,10 +277,36 @@ body{
 }
 
 @font-face {
-    font-family: 'RuneScape-Quill';
+    font-family: 'Charter-Regular';
     font-style: normal;
-    font-weight: 400;
-    src: url('RuneScape-Quill.woff') format('woff'),
-         url('RuneScape-Quill.woff2') format('woff2'),
-         url('RuneScape-Quill.ttf') format('truetype');
+    font-weight: normal;
+    src: url('Charter/OpenType_TT/charter_regular.ttf') format('truetype'),
+         url('Charter/WOFF/charter_regular.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Charter-Bold';
+    font-style: normal;
+    font-weight: bold;
+    src: url('Charter/OpenType_TT/charter_bold.ttf') format('truetype'),
+         url('Charter/WOFF/charter_bold.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Charter-Bold-Italic';
+    font-style: italic;
+    font-weight: bold;
+    src: url('Charter/OpenType_TT/charter_bold_italic.ttf') format('truetype'),
+         url('Charter/WOFF/charter_bold_italic.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Charter-Italic';
+    font-style: italic;
+    font-weight: normal;
+    src: url('Charter/OpenType_TT/charter_italic.ttf') format('truetype'),
+         url('Charter/WOFF/charter_italic.woff') format('woff');
 }
