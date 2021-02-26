@@ -1,94 +1,59 @@
-
-
-
-body {
+body{
+    background-color: #ffffff; 
     font-family: 'Charter-Regular', serif;
-    background-color: #ffffff/* #f6e8e5*/;
-    font-size: 25px;
+    font-size: 26px;
     line-height: 1.3;
     color: #342D33;
-    font-weight: 400;
     padding: 0px;
     margin: 0px;
 }
 
-
-table{
-        padding-top: 20px;
-
+h1{
+    padding-top: 0px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.2;
+    font-size: 60px;
+    font-weight: bold;
+    color: #312e2d; 
 }
 
-.caption{
-    font-family: monospace;
-    font-size: 14px;
-    float: right;
-}
-
-/* #363030
-The single column in the center of the page
-*/
-.content {
-    max-width: 850px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.bigbox{
-    min-height: 80px;
-    overflow: hidden;
-    padding: 20px;
-    margin: 20px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-}
-
-.righttop{
-    float: left;
-    height: 300px;
-}
-
-.top_picture_frame{
-    width: 300px;
-    float: right;
-}
-
-.project_picture_frame {
-    width: 200px;
-    height: 200px;
-    float: left;
-}
-
-.project_text_box{
-    max-width: 650px;
-    margin-left: 220px;
-}
-
-.project_box{
-    max-height: 200px;
-    overflow: hidden;
-    padding-top: 20px;
-    padding-bottom: 5px;
+h2{ 
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.2;
+    font-weight: bold;
+    font-size: 38px;
+    color: #312e2d; 
 }
 
 .col{
-	margin-left: auto;
-	margin-right: auto;
-    max-width: 790px;
-    padding-left: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
     padding: 40px;
 }
 
+li{padding-bottom: 10px;}
 
 a {
     color: #342D33;
     text-decoration: none;
-    border-radius: 15px;
-    border: 1px dotted #342D33;
+    border-radius: 5px;
+    background-color: #eeeeee;
+
 }
 
-a:hover {
-        color: #342D33;
-background-color: #eeeeee;
+a:hover{
+    background-color: #efe8dc;
+}
+
+.footer{
+    font-family: monospace;
+    background-color: #efe8dc;
+    color: #342D33;
+}
+
+table{
+    font-size: 16px;
 }
 
 .imgbox{
@@ -97,77 +62,11 @@ background-color: #eeeeee;
     float: right;
    }
 
-h1{
-    font-family: 'Roboto', sans-serif;
-    line-height: 1;
-    font-size: 60px;
-    font-weight: bold;
-    color: #312e2d; 
-    margin: 0px;
-    padding: 0px;
+td, th{
+    padding-right: 60px;
+    text-align: left;
+    vertical-align: top;
 }
-
-h2{ 
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 38px;
-    margin: 0px;
-        padding: 0px;
-
-}
-
-h3 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 29px;
-    margin: 0px;
-        padding: 0px;
-}
-
-.rsheader {
-    font-family: 'Charter-Regular', serif;
-        font-size: 70px;
-        margin: 0px;
-        padding: 0px;
-        line-height: .8;
-}
-
-td{
-    padding-right: 80px;
-}
-
-
-
-/* Holds the text on /index.html */
-.box{
-    width: 750px;
-    height: 300px;
-    padding: 30px;
-    float: left;
-    margin: 0px;
-    display: inline-block;
-
-}
-
-#boxholder {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 750px;
-    padding: 0px;
-    min-height: 50vh;
-}
-
-/* Sets photo's width to 100% of .photobox */
-.photo {
-    float: right;
-    width: 300px;
-    display: inline;
-}
-
-li{
-    padding-bottom: 15px;
-}
-
 
 .code{
     padding: 15px;
@@ -180,47 +79,10 @@ li{
     background: #EBEDEF;
     overflow: hidden;
 }
-.icode{
-
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;  
-    background: #EBEDEF;
-    overflow: hidden;
-}
-
-
 
 
 @media screen and (max-width: 800px) {
-.caption{
-    display: none;
-}
-.imgbox{
-    width: 100%;
-    padding: 0px;
-    padding-bottom: 20px;
-}
-
-.project_text_box{
-    max-width: 100%;
-    margin-left: 0px;
-}
-.col{
-     padding: 30px;
-
-}
-
-.top_picture_frame{
-    width: 100%;
-    float: right;
-}
-.project_box{
-    min-height: 200px;
-    max-height: 10000px;
-    overflow: hidden;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
+.col{padding: 30px;}
 }
 
 @font-face {
@@ -230,8 +92,6 @@ li{
     src: url('Charter/OpenType_TT/charter_regular.ttf') format('truetype'),
          url('Charter/WOFF/charter_regular.woff') format('woff');
 }
-
-
 @font-face {
     font-family: 'Charter-Bold';
     font-style: normal;
@@ -239,8 +99,6 @@ li{
     src: url('Charter/OpenType_TT/charter_bold.ttf') format('truetype'),
          url('Charter/WOFF/charter_bold.woff') format('woff');
 }
-
-
 @font-face {
     font-family: 'Charter-Bold-Italic';
     font-style: italic;
@@ -248,8 +106,6 @@ li{
     src: url('Charter/OpenType_TT/charter_bold_italic.ttf') format('truetype'),
          url('Charter/WOFF/charter_bold_italic.woff') format('woff');
 }
-
-
 @font-face {
     font-family: 'Charter-Italic';
     font-style: italic;
