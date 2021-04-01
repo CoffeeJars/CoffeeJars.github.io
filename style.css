@@ -1,87 +1,59 @@
 body{
-    background-color: #ffffff; 
+    background-color: #eeeeee; 
     font-family: 'Charter-Regular', serif;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 1.3;
     color: #342D33;
     padding: 0px;
     margin: 0px;
 }
 
-
-.headimg{
-    padding-right: 0px;
-    margin-right: 30px;
-    overflow: auto;
-    float: right;
-    display: inline;
-    height: 180px;
-    border-radius: 20px;
-}
-
 h1{
     padding-top: 0px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
     line-height: 1.1;
-    font-size: 64px;
+    font-size: 50px;
     font-weight: bold;
     color: #312e2d; 
 }
 
 h2{ 
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.2;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.1;
     font-weight: bold;
-    font-size: 38px;
+    font-size: 35px;
+    color: #312e2d; 
+}
+
+h3{ 
+    font-family: 'Lato', sans-serif;
+    line-height: 1.1;
+    font-weight: bold;
+    font-size: 30px;
     color: #312e2d; 
 }
 
 .col{
-    min-height: 100vh;
     margin-left: auto;
     margin-right: auto;
     max-width: 800px;
     padding: 40px;
 }
 
-li{padding-bottom: 10px;}
-
 a {
     color: #342D33;
     text-decoration: none;
     border-radius: 5px;
-    background-color: #eeeeee;
-
+    background-color: #DCDCDC;
 }
 
 a:hover{
-    background-color: #efe8dc;
+    background-color: #99CC99;
 }
 
-.footer{
-    padding: 10px;
-    font-size: 12px;
-    font-family: monospace;
-    background-color: #efe8dc;
-    color: #342D33;
-}
+li{padding-bottom: 10px;}
 
-table{
-    font-size: 16px;
-}
-
-.imgbox{
-    width: 400px;
-    padding: 10px;
-    float: right;
-   }
-
-td, th{
-    padding-right: 60px;
-    text-align: left;
-    vertical-align: top;
-}
-
+/* May need to be fixed before use. <pre> inside div.*/
 .code{
     padding: 15px;
     margin-top: 10px;
@@ -94,21 +66,13 @@ td, th{
     overflow: hidden;
 }
 
-
+/* For viewing on phones */
 @media screen and (max-width: 800px) {
-.col{padding: 30px;}
-
-
-.headimg{
-    float: none;
-    display: inline;
-    height: 180px;
-    border-radius: 20px;
-}
-
+    .col{padding: 30px;}
 
 }
 
+/* Use charter for serif body font. */
 @font-face {
     font-family: 'Charter-Regular';
     font-style: normal;
