@@ -1,5 +1,5 @@
 body{
-    background-color: #eeeeee; 
+    background-color: #ffffff;
     font-family: 'Charter-Regular', serif;
     font-size: 24px;
     line-height: 1.3;
@@ -44,11 +44,11 @@ a {
     color: #342D33;
     text-decoration: none;
     border-radius: 5px;
-    background-color: #DCDCDC;
+    background-color: #faf8eb;
 }
 
 a:hover{
-    background-color: #FFFFCC;
+    background-color: #f5e2f3;
 }
 
 li{padding-bottom: 10px;}
