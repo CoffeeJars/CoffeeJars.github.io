@@ -1,5 +1,5 @@
 body{
-    background-color: #ffffff;
+    background-color: seashell;
     font-family: 'Charter-Regular', serif;
     font-size: 24px;
     line-height: 1.3;
@@ -40,18 +40,37 @@ h3{
     padding: 40px;
 }
 
+.spotlight{
+    /* background-color: bisque; */
+    border-radius: 16px;
+}
+
 a {
     color: #342D33;
     text-decoration: none;
     border-radius: 5px;
-    background-color: #faf8eb;
+    background-color: lavender;
 }
 
 a:hover{
-    background-color: #f5e2f3;
+    background-color: honeydew;
 }
 
+tr {
+}
+
+
+
 li{padding-bottom: 10px;}
+
+.book_title {
+    font-style: italic;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.1;
+    font-weight: bold;
+    font-size: 35px;
+    color: #312e2d; 
+}
 
 /* May need to be fixed before use. <pre> inside div.*/
 .code{
