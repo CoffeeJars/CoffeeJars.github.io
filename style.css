@@ -53,13 +53,16 @@ a {
 }
 
 a:hover{
-    background-color: honeydew;
+    background-color: thistle;
 }
 
 tr {
 }
 
-
+hr{
+    	border-top: 1px dashed #8c8b8b;
+	border-bottom: 1px dashed #fff;
+}
 
 li{padding-bottom: 10px;}
 
