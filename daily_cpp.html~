@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81871818-3"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-81871818-3');
+        </script>
+        
+        <!-- Import stylesheet and fonts -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+
+        <!-- To prevent google from suggesting French translation since I used resume with accent marks.-->
+        <meta name="google" content="notranslate" />
+
+        <!-- Define viewport for mobile -->
+        <meta name="viewport" content="width=450" />
+
+        <!-- Load icon and set tab name -->
+        <link rel="icon" href="icon.png"/>
+        <title>Daily C++</title>
+    </head>
+    <body>
+        <div class="col">
+          <h1>Programming Principles and Practice Using C++</h1>
+	  
+	  <h2 id="07-24">07-26</h2>
+	  <p>
+	    It's 7:42 PM. First day of really sticking to this. I am going to try and finish all of the exercises for chapter 4. My Forest app is going in stopwatch mode and OBS is streaming this.
+	  </p>
+	  <p>
+	    8:42! We have made it an hour. Finished exercise 2 and most of 3. Gonna try and speed up to finish a few more exercises before I stop for the night. I just took a (type-break) and am returning to the fray.
+	  </p>
+	  <p>That is it for tonight. 9:48 PM. Finished exercise 5 just now.</p>
+	  <hr>
+	  
+	  
+	  
+</div> </body> </html>
+
+    
+
