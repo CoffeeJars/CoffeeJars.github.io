@@ -1,0 +1,158 @@
+Goal: to create a pleasent and powerful computing experience 
+
+First I identify my four highest computing priorites:
+1. Stable - The system must be rock solid. No crashing, freezing, rebooting. These issues are unacceptable in 20XX.
+2. Minimal - In both interface and guts. This allows the user experience to be as frictionless as possible. A minimal system setup allows for quick reinstallation and easy maintenance.
+3. Free* - While not an idealogical zealot for free software I apreciate the ideal and strive to use free software over closed software wherever possible.
+4. Usable - The above priorities are useless if the system is unable to preform the tasks I require. A usable system achieves this level of functionality while also not requiring constant fixes, adjustments, config tweaking.
+
+
+
+Software requirements:
+Scopy (software for ADALM 2000)
+XILINX Vivado for students 
+
+It follows from principles (1) sability and (4) usability that computer usage should be made as ergonomic as possible. Much of ergonomics exists outside the realm of the computer, but steps should be taken where possible to reduce eye strain and hand strain. This means having terminal and editor colors, removing blue light before sundown (maybe?), taking typing breaks while using the editor. I use (type-break-mode) in emacs for this and (god-mode) to provide more ergonomic key bindings while maintianing the emacs style of editing. Also I should configure type break more and have it suggest stretches, exercises, quotes I like, etc.
+
+
+I have used numerous window managers and desktop enviornments. I have grown to dislike tiling window managers. The key crunching required to get a desired layout can border on comical sometimes. Plus. I want to remember as few keyboard bindinds as possible. http://xahlee.info/linux/why_tiling_window_manager_sucks.html and https://leahneukirchen.org/blog/archive/2008/08/thoughts-on-window-management.html describe some of my complaints with window managers well. I have fallen hard for calm window manager. (on debian the package is openbsd-cwm) there is also a fork of cwm maintained on github which tracks the openbsd repo.
+
+login manager? lighdm? also grub splash screen
+
+While (4) directs that there should be no need to constantly fiddle with 
+source: https://antofthy.gitlab.io/info/usage/Home_Cleanup.txt
+Home Cleanup Proceedure...
+
+Quote from Corey Venour..
+
+   Please. We all need to live together on this machine, but it is becoming
+   increasingly difficult to do anything. Let's clear some space, and make
+   it run a little better.
+
+Would everyone please look through their home directories and try to
+do the following.
+
+1/ In your home directory please execute the following to discover
+    where you are using disk space so you can concentrate on those
+    areas. NOTE these commands could take a bit of time.
+
+      For text displays use
+        :::prompt:::> du
+      or for just the usage in each sub-directory and a total
+        :::prompt:::> du -s * .
+
+      For X winodws displays use the following
+        :::prompt:::> du | xdu &
+
+
+2/ Remove files which are
+
+    a) Core files
+        NOTE: The system automatically removes these after 3 days,
+        These files are however very large so when space is tight a
+        special search is often a good idea.
+
+          :::prompt:::> find ~ -name "core" -print | xargs rm
+
+    b) Any files which you No longer needed.
+        Particularly old temporary files and reports. To look at how old
+        files are please use in appropriate directories.
+
+          :::prompt:::> ls -Flag
+
+    c) Which will not be used for some time but can be generated from
+        another source.  For example:
+            .dvi files which can be re-generated from .tex files
+
+    d) Clean out source directories of object files and executables
+        Most source directories have a make file which have appropriate
+        rules to clean that source area. Eg one of the following
+        usually works.
+          :::prompt:::> make clobber
+          :::prompt:::> make realclean
+          :::prompt:::> make clean
+
+    e) Old mail folders and files
+        or go through with your mail program and clean out your mail
+
+
+  3/ Compress large files, like postscript files, which are not needed
+    for some time  or  are just being stored for future use.
+
+        To compress    file -> file.Z   use
+          :::prompt:::> compress file
+
+        To later decompress
+          :::prompt:::> uncompress file.Z
+
+    Altunativally and preferabally, use a new compression program
+    called GZIP which is available for all machines including PCs.
+
+        To gzip a file    file -> file.gz
+          :::prompt:::> gzip file
+
+        To un-gzip. Note this will also uncompress compressed (.Z) files.
+          :::prompt:::> gzip -dv file.gz
+
+    NOTE: WWW Users should be able to read compressed postscript file
+    automatically, you do not need to keep WWW postscript files
+    uncompressed.
+
+        To gzip all your postscript files in your home directory use
+          :::prompt:::> find ~ -name "*.ps" -print | xargs gzip
+
+
+  4/ Archive whole subdirectories for storage
+    I suggest you copy archived sources to a directory you create for
+    such files.
+
+    Archive a sub-directory (to a compressed tar file)
+
+      cd to just above the sub-directory then
+        :::prompt:::> tar cvf - subdir | compress > subdir.tar.Z
+
+      now remove the subdirectory (to actually save some space)
+        :::prompt:::> rm -r subdir
+
+      and move the archive to your special directory
+
+
+    List the contents of a compressed tar file
+        :::prompt:::> zcat filename.tar.Z | tar tvf -
+
+
+    De-Archive a compressed tar file
+
+      cd to where you want the sub-directory created
+        :::prompt:::> zcat filename.tar.Z | tar xvf -
+
+      and remove or re-archive when finished
+
+
+    For more information on tar archives please look for a companion
+    Guide to Archiving in this directory or at the URL of
+
+        http://www.cit.gu.edu.au/~anthony/tower/NE/usage/
+
+    This document also contains information on gzip tar archives and
+    a set of csh/tcsh aliases to make your archiving easier.
+
+
+  5/ Strip your executable programs.
+    Executable programs under UNIX contain a lot of old information
+    left in them from the compilation and link build process.  This
+    information sometimes occupy upto 30% of the executables size and
+    even more is you built a debugging ( -g option ) version.  This
+    information is NOT used by the program and should be removed to save
+    space.
+
+      Cd into your "bin" directory or where ever you keep executables
+        :::prompt:::> cd ~/bin
+
+      Strip all the files in this directory.
+        :::prompt:::> strip *
+
+    NOTE: strip will automatically ignore previously strip'ed files,
+    shell scripts and non-executables.
+    WARNING: Do NOT strip executables for another architure or machine
+    except on that machine.
