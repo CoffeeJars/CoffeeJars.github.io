@@ -1,6 +1,6 @@
 body {
-    color: #524a63;
-    background-color: #a7b8c2;
+    color: rgb(186, 183, 152);
+    background-color: rgb(107, 96, 102);
     font-family: serif;
     font-size: 18px;
     line-height: 1.2;
@@ -9,27 +9,35 @@ body {
 }
 
 a {
-    color: #a7b8c2;
+    color: #BAB798;
     text-decoration: none;
     border-radius: 5px;
-    background-color: #524a63;
+    background-color: #826B70;
+}
+
+pre {
+    font-family: Monospace;
+    font-size: 15px;
+    padding: 5px;
+    background-color: #826B70;
+    color: #BAB798;
+    border-radius: 5px;
 }
 
 a:hover {
-    color: #524a63;
-    background-color: #a7b8c2;
-    border: 1px solid #524a63;
+    color: #826B70;
+    background-color: #BAB798;
 }
 
 h1 {
-    color: #728794;
+    color: #9C8277;
     font-family: 'Inter', sans-serif;
     line-height: 1;
     font-size: 32px;
 }
 
 h2 { 
-    color: #728794;
+    color: #9C8277;
     font-family: 'Inter', sans-serif;
     line-height: 1;
     font-size: 26px;
@@ -45,9 +53,3 @@ h2 {
 ul { list-style-type: square; }
 
 .email { width: 260px; }
-
-pre {
-    padding: 5px;
-    border: 1px dashed #728794;
-    border-radius: 5px;
-}
