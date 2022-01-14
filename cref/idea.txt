@@ -1,0 +1,10 @@
+The goal is to synthesize together a high quality and extensive source
+on C programming.  Complete with good code examples which I can reuse.
+Books I own in paper: * C in plain english - good for conversational
+tone * K&r - complete the code as examples * POSIX threads - this
+would be really painful im sure * developers guide to debugging -
+could be useful to add gdb info / prof / cov I will supplement these
+with LDM's material, online resources, handmade hero, etc!  Even
+incorporate material from senior design, and os, and comparch classes
+The most important part is collecting together the material and
+writing, I can always cut down or reformat later!
