@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
     
     <link rel="icon" href="img/icon.png"/>
     <title>srd</title>
@@ -12,19 +12,38 @@
   <body>
     <div class="centered">
 
-      <h1>Stephen Duncanson</h1>
-      <!-- Intro, about, greeting.-->
-      <p>
-	Welcome to my website! I'm a Computer Engineering major
+      <h1>Stephen Duncanson</h1>      
+	<img class="me" src="img/brothers.png">
+      <p> 
+
+	<!-- Intro, about, greeting.-->
+	Welcome! I'm a Computer Engineering major
 	at <a href='https://uconn.edu/' target="_blank">UConn</a>.
 	I'm into programming, reading or listening to books, running,
-	and electronics. Reach me at <img class="email"
-	src="img/email.png"/>.<br>
+	and electronics.
       </p>
-      
-      <h2>C Programming Reference</h2>
-      <!-- Detailed, simply-written, self-contained, evergreen. 
-	   Includes whitepapers and synthesis from web/book/university sources.-->
+      <p>I have competed in
+      one <a href='https://www.openpowerlifting.org/u/stephenduncanson'
+      target="_blank">powerlifting</a> meet and jogged
+      one <a href='https://newenglandruns.com/race-results/ocean-beach-john-jessie-kelley-half-marathon/?date=2018-08-04&result=28240&bib=Stephen+Duncanson&gender=&division=&order_by=finish_time&order=ASC'
+	     target="_blank">half marathon</a>.</p>
+      <p>As an undergraduate research programmer I helped publish <a href="https://arxiv.org/abs/2110.08145" target="_blank">Resonance-enhanced multiphoton ionization in the x-ray regime</a>.</p>
+
+      <p>Send mail to: <br><img class="email" src="img/email.png"/></p>
+     
+      <h2>The Practice of C</h2>
+      <!-- Detailed, simply-written, self-contained, evergreen,
+	   quantitative.  Includes whitepapers and synthesis from
+	   web/book/university sources. Include many worked
+	   examples. Split into sections of focus with slightly
+	   different style. Ex: Section I language is more tutorial
+	   and conversational to explore the language and the
+	   needlessly complex compilation process. Other sections may
+	   be more technical and focus on being a long term reference
+	   on a certain data structure or algorithm as I develop as a
+	   wiz.
+	--> 
+     
       <p>C programs begin as text files composed
 	of <a href="cref/0_language.html" target="_blank"> comments,
 	directives, statements, expressions</a>. A series of tools
@@ -33,26 +52,31 @@
 	target="_blank">human-readable</a> source code into an
 	executable.</p>
       
-      <p></p>
-      
       <p>Pointers. Memory allocation: malloc(), free(), memory leaks.</p>
 
       <p><a href="" target="_blank">File I/O</a> Ex: LZ77. Sockets.</p>
       
       <p>Threads, Mutex, POSIX condition. </p>
       
-      <p>Data structures and Algorithms:
-	<ul>
-	  <li><a href="cref/3_array.html" target="_blank">Arrays</a>
-	    are a primitive in C. They're also the basis
-	    for <a href="">strings</a>.</li>
-	  <li><a href="">Linked Lists</a></li>
-	  <li>Stacks</li>
-	  <li>Queues</li>
-	</ul>
+      <p><a href="cref/3_array.html" target="_blank">Arrays</a>
+      are a primitive in C. They're also the basis
+	for <a href="">strings</a>. Stringology, string algorithms. Multi dimensional arrays 3 implementations compared.
+	<a href="">Linked Lists</a>
+	Stacks, Queues. </p>
+      <p>
+	<h2>How to make halftone images in GIMP</h2>
+	<ol>
+	  <li>Load original image in GIMP</li>
+	  <li>Image -> mode -> greyscale</li>
+	  <li>Colors -> Levels -> Set output in range [180,220] to wash the photo out. The higher these values the fewer dots in the final image.</li>
+	  <li>Image -> mode -> Indexed. With settings: 1-bit palette / Color dithering: Floyd-Steinberg (normal)</li>
+	  <li>Image -> Mode -> RGB</li>
+	  <li>Color -> Map -> Color Exchange to set bg and fg colors</li>
+	  <li>Image -> mode -> Indexed (1-bit optimal) </li>
+	</ol>
       </p>
 
-      
+ 
     </div>
   </body>
 </html>
