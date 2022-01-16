@@ -1,9 +1,7 @@
-
 body {
     color: #172694;
     background-color: #EADCD4;
-    font-family: serif;
-    font-size: 16px;		/*default font size*/
+    font-family: Garamond, serif;
     line-height: 1.2;
     padding: 0px;
     margin: 0px;
@@ -11,9 +9,45 @@ body {
 
 a {
     color: #172694;
-    text-decoration: none;
-    border-radius: 5px;
     background-color: #e2cec3;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+a:hover {
+    color: #EADCD4;
+    background-color: #172694;
+}
+    
+.aside {	/* works for "aside" tag and class name "aside" */
+     display: inline;	/* prevents parent paragraph from breaking */
+      float: right;	/* positions the note to the right of the content */
+      position: relative;	/* forces note to be relative its the normal position */
+     width: 20vw;	/* limits the width of the marginal note */
+      margin-right: -202vw;	/* sets the distance away from the body text */
+      font-size: 16px;	/* makes font slightly smaller */
+     
+}
+
+
+aside, .aside {
+    display: inline;
+    float: right;
+    position: relative;
+    width: 15vw;
+    margin-right: -16vw;
+    color: #170f0b;
+    font-size: 12px;
+
+}
+
+a.toc {
+    color: #172694;
+    background-color: #EADCD4;
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: bold;
+    border-radius: 0px;
 }
 
 pre {
@@ -21,35 +55,46 @@ pre {
     font-size: 13px;
     padding: 3px;
     background-color: #e2cec3;
-    color: #941726;
+    color:#941726;
 }
 
-a:hover {
-    color: #EADCD4;
-    background-color: #172694;
-}
 
 h1 {
     color: #172694;
-     font-family: 'IBM Plex Sans', sans-serif;
+    font-family: Helvetica, sans-serif;
     line-height: 1;
     font-size: 26px;
 }
 
 h2 { 
     color: #172694;
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: Helvetica, sans-serif;
     line-height: 1;
     font-size: 20px;
-
-    
 }
+
+a.toc { 
+    color: #172694;
+    font-family: Helvetica, sans-serif;
+    line-height: 1;
+    display: block;
+    font-size: 50px;
+    padding: 0px;
+    margin: 0px;
+}
+
 
 .dark {
-    color: #170f0b;
+
     
 }
+table {
+    font-family: Monospace;
+}
 
+td {
+    padding-right: 10px;
+}
 .red {
     color: #941726;
 }
@@ -58,14 +103,14 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     max-width: 670px;
-    padding: 10px;
+    padding: 15px;
 }
+
 
 ul { list-style-type: square; }
 
-.email { width: 260px;
-	 height: 18px;
-	 
+.email {
+    max-height: 1.3em;
  }
 
 .me {
@@ -74,7 +119,17 @@ ul { list-style-type: square; }
     padding-left: 10px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
+    aside, .aside {display: none;}
+}
+
+
+@media (max-width: 670px) {
+
+    aside, .aside {
+	display: none;
+    }
+
     .me {
 	float: none;
 	display: block;
@@ -82,4 +137,16 @@ ul { list-style-type: square; }
 	padding: 0;
 	margin-bottom: 10px;
     }
+    div.margin {
+	display: none;
+    }
 }
+div.margin {
+  position: relative;
+  left: 100%;
+  max-width: 100px;
+  font-weight: bold;
+
+  font-size: 12px;
+}
+
