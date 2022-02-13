@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=500" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="../img/icon.png"/>
+    <title>C Reference</title>
+  </head>
+  
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar" >
+      <h3>C Reference</h3>
+      <a href="#list_a" class="bar-item">Lexical Elements</a>
+      <a href="#prepro" class="bar-item">The C Preprocessor</a>
+      <a href="#progstyle" class="bar-item">Programming Style</a>
+      <a href="" class="bar-item">Types</a>
+      <a href="#comments" class="bar-item">Comments</a>
+      <a href="#array" class="bar-item">Array Data Structure</a>
+    </div>
+
+    <div class="centered">
+      <a name="list_a"></a>
+      <h2>Lexical Elements</h2>
+      <p>A C source file is a sequence of characters. Legal characters
+      are the 52 Latin capital and small letters,</p>
+      <table>
+	<tr>
+	  <td class="mono">A<iv></td> <td class="mono">B</td> <td class="mono">C</td> <td class="mono">D</td> <td class="mono">E</td> <td class="mono">F</td> <td class="mono">G</td> <td class="mono">H</td> <td class="mono">I</td> <td class="mono">J</td> <td class="mono">K</td> <td class="mono">L</td> <td class="mono">M</td> <td class="mono">N</td> <td class="mono">O</td> <td class="mono">P</td> <td class="mono">Q</td> <td class="mono">R</td> <td class="mono">S</td> <td class="mono">T</td> <td class="mono">U</td> <td class="mono">V</td> <td class="mono">W</td> <td class="mono">X</td> <td class="mono">Y</td> <td class="mono">Z</td>
+	</tr>
+	<tr>
+	  <td class="mono">a</td><td class="mono">b</td><td class="mono">c</td><td class="mono">d</td><td class="mono">e</td><td class="mono">f</td><td class="mono">g</td><td class="mono">h</td><td class="mono">i</td><td class="mono">j</td><td class="mono">k</td><td class="mono">l</td><td class="mono">m</td><td class="mono">n</td><td class="mono">o</td><td class="mono">p</td><td class="mono">q</td><td class="mono">r</td><td class="mono">s</td><td class="mono">t</td><td class="mono">u</td><td class="mono">v</td><td class="mono">w</td><td class="mono">x</td><td class="mono">y</td><td class="mono">z</td>
+	</tr>
+      </table>
+      <p> the 10 digits, </p>
+      <table>
+	<tr>
+	  <td class="mono">0</td>
+	  <td class="mono">1</td>
+	  <td class="mono">2</td>
+	  <td class="mono">3</td>
+	  <td class="mono">4</td>
+	  <td class="mono">5</td>
+	  <td class="mono">6</td>
+	  <td class="mono">7</td>
+	  <td class="mono">8</td>
+	  <td class="mono">9</td>
+	</tr>
+      </table>
+      <p>the SPACE , <br>
+	the horizontal tab (HT), vertical tab (VT), form
+	feed (FF) control characters, <br> and 29 graphic
+	characters: <p>
+	<table style="width: 100%;">
+	  <tr><td class="mono">!</td><td>EXCLAMATION MARK</td> <td class="mono">+</td><td>PLUS SIGN</td> <td class="mono">"</td><td>QUOTATION MARK</td> </tr>
+	  <tr><td class="mono">#</td><td>NUMBER SIGN</td> <td class="mono">=</td><td>EQUALS SIGN</td> <td class="mono">{</td><td>LEFT CURLY BRACKET</td> </tr>
+	  <tr><td class="mono">%</td><td>PERCENT SIGN</td> <td class="mono">~</td><td>TILDE</td> <td class="mono">}</td><td>RIGHT CURLY BRACKET</td> </tr>
+	  <tr><td class="mono">^</td><td>CIRCUMFLEX ACCENT</td> <td class="mono">[</td><td>LEFT SQUARE BRACKET</td> <td class="mono">,</td><td>COMMA</td> </tr>
+	  <tr><td class="mono">&</td><td>AMPERSAND</td> <td class="mono">]</td><td>RIGHT SQUARE BRACKET</td> <td class="mono">.</td><td> FULL STOP </td> </tr>
+	  <tr><td class="mono">*</td><td>ASTERISK</td> <td class="mono">'</td><td>APOSTROPHE</td> <td class="mono"><</td><td>LESS-THAN SIGN</td> </tr>
+	  <tr><td class="mono">(</td><td>LEFT PARENTHESIS</td> <td class="mono">|</td><td>VERTICAL LINE</td> <td class="mono">></td><td>GREATER-THAN SIGN</td> </tr>
+	  <tr><td class="mono">_</td><td>LOWLINE</td> <td class="mono">\</td><td>REVERSE SOLIDUS</td> <td class="mono">/</td><td>SOLIDUS</td> </tr>
+	  <tr><td class="mono">)</td><td>RIGHT PARENTHESIS</td> <td class="mono">;</td><td>SEMICOLON</td> <td class="mono">?</td><td>QUESTION MARK</td> </tr>
+	  <tr><td class="mono">-</td><td>HYPHEN-MINUS</td> <td class="mono">:</td><td>COLON</td></tr>
+	</table>
+
+      <p>Solidus and reverse solidus are the familiar slash and backslash. Lowline is an underscore. </p>
+	
+      <a name="prepro"></a>
+      <h2>The C Preprocessor</h2>
+
+      <p>C is a compiled language. Computer languages like C use a program called a compiler to
+      convert between human readable source code and machinecode which can be executed on a CPU. </p>
+      <p>Expand conceptually on compilation vs dynamic languages with
+      interpreters.</p>
+
+      <p>The first stage of compilation is preprocessing where...</p>
+<code><pre>
+$ cc -E input.c
+</code></pre>
+      <p>https://randu.org/tutorials/c/basic2.php</p>
+
+      <!-- <h2>Lexical Analysis</h2> -->
+      <!-- <h2>Syntax Analysis</h2> -->
+      <!-- <h2>Semantic Analysis</h2> -->
+      <!-- <h2>Makefiles</h2> -->
+      
+      <a name="comments"></a>
+      <h2>Comments, Directives, Statements, Expressions</h2>
+
+      <p>All the textual elements you may find inside a <code>.c</code> source file. </p>
+      
+      <h2>Comments</h2>
+      <p>You spend more time reading your code than the computer
+      does. Leave concise and helpful comments. Old comments can be
+      misleading, so prune back irrelevant or unnecessary ones. </p>
+<code><pre>
+/* Between the "slash star" and the "star slash" is a comment in c. */
+// From C99 onward you can do a line comment with a double slash.
+</code></pre>
+      <p>Rob Pike in <a href="http://doc.cat-v.org/bell_labs/pikestyle" target="_blank">Notes on Programming in C</a>: <i>"...keep comments brief and
+	banner-free. Say what you want to say in the program, neatly and
+	  consistently. Then move on."</i></p>
+	      
+      <p><a href="https://www2.cs.arizona.edu/~mccann/styletemplatesCP.html"
+	    target="_blank">Prof. McCann</a> argues: <i>" It has been
+	  estimated that about 70% of programming effort is put into
+	  the maintenance of old code ... Commenting exists to help
+	  those unfortunate programmers who have to look at the code
+	  months or years after it was written."</i></p>
+      <p>Strike a healthy balance between over and under
+	commenting. Comments are not checked by the compiler, meaning they can
+	lie to you. However, well written and purpose-describing
+	comments can make debugging, maintaining, and replacing code easier.</p>
+
+      <h2>Directives</h2>
+      <p>A directive is a command given to the preprocessor. During
+	the first stage of <a href="../cref/1_compilation.html"
+	target="_blank">compilation</a> a program called the
+	preprocessor will read the <code>.c</code> source file and:
+	preprocessor is the program running during the first step of
+	compilation, a program (the preprocessor) reads the source
+	file and does several simple prep steps: Joining lines that
+	continue with \. <p>
+<code><pre>
+#include &#60;stdio.h&#62;
+</code></pre>
+
+<a name="progstyle"></a>
+<h2>C Programming Style</h2>
+      <p>Rob Pike: <i>"A program is a sort of publication. It's meant
+	  to be read by the programmer, another programmer (perhaps
+	  yourself a few days, weeks or years later), and lastly a
+	  machine."</i></p>
+	
+	<a name="array"></a>
+      <h2>Array Data Structure in C</h2>
+      <p>An array is a fixed number of same-typed elements stored
+	contiguously. Each element can be accessed with its index, or
+	offset into the array, starting from 0. </p>
+      <!-- <p>Robert Sedgewick: <i>"."</i></p> -->
+      <h2>Basics</h2>
+      <p>Let us define an array <code>a</code> of 5 <code>int</code>'s.</p>
+<pre>
+int a[5]; 
+</pre>
+      <p>Using the <code>sizeof</code> keyword we can determine how
+      many bytes of memory our array is occupying: </p>
+<pre>
+printf("Array a is taking up %ld bytes of memory.", sizeof(a));
+</pre>
+
+<pre>
+Array a is taking up 20 bytes of memory.
+</pre>
+      <p> Makes sense. An integer has a size of 4 bytes on my machine;
+      An array of 5 contiguous integers will have a size equal to the
+	product 4 * 5 == 20 bytes.</p>
+      <p> When using arrays we must be careful to store something
+	meaningful at position <code>a[i]</code> before refering to
+	it. Let's see why by printing out the contents of the array
+	that we just defined above. Iterating over the indices using
+	a <code>for</code> loop we can print the value of each
+	element:</p>
+<pre>
+for (int i=0; i<5; i++)
+    printf("a[%d]: %d\n", i, a[i]);
+</pre>
+<pre>
+a[0]: 486936992
+a[1]: 21997
+a[2]: 486936656
+a[3]: 21997
+a[4]: -1626839984
+</pre>
+      <p> Allocating an array does not clear the bits within that
+      memory, the values we read from this uninitialized array are
+      simply the values that existed before our allocation. If we did
+      wish to initalize an array filled with 0s we could have instead
+      defined the array like this:</p>
+<pre>
+int a[5] = {0};
+</pre>
+      <p>Re-running our <code>for</code> loop from above:</p>
+<pre>
+a[0]: 0
+a[1]: 0
+a[2]: 0
+a[3]: 0
+a[4]: 0
+</pre>
+      <p>Another sharp edge of C is the lack of guardrails on array
+	access. We are free to shoot ourselves in the foot and access
+	an "element" of the array that may not really be part of the
+	array at all. </p>
+      <p> Let us adjust the <code>for</code> loop code to demonstrate this.</p>
+<pre>
+for (int i=-2; i<7; i++)
+    printf("a[%d]: %d\n", i, a[i]);
+</pre>
+      <p>The dummy variable i now starts at -2 and reads until array
+	index 6.</p>
+<pre>
+a[-2]: 0
+a[-1]: 21940
+a[0]: 0
+a[1]: 0
+a[2]: 0
+a[3]: 0
+a[4]: 0
+a[5]: 32766
+a[6]: 0
+</pre>
+      <p>Here we can see that our <code>a</code> array has been
+      correctly initialized to all zeros. However <code>A[-1], A[-2],
+      A[5], A[6]</code> are not really part of this array at all, and
+      thus, have not been properly initialized.</p>
+      <p>Reading erroneous memory is bad, but writing data to the
+      wrong address in memory might be even worse. Imagine if we had
+      declared some additional variables inside
+      our <code>main(void)</code> function:</p>
+<pre>
+#define N 5
+
+int main(void) {
+  int a[N] = {0};
+  int b = 42;
+
+  for (int i=-2; i<7; i++) {
+    a[i] = 1;
+  }
+  printf("b=%d\n",b);
+  return 0;
+}
+</pre>
+<pre>
+b=1
+</pre>
+      <p><code>b</code> was assigned to 42, but by being adjacent
+	to <code>a</code> in memory, this value was accidentally
+	overwritten with an improper value.</p>
+      <p>Writing past either end of the array may overwrite the dummy
+	iteration variable you were using to iterate in the first
+	place! In our example, this is <code>i</code> which we are
+	purposefully letting roam a bit too free between -2 and
+	6. If <code>i</code> is overwritten by writing past the ends
+	of the array into the array, our intended array access with be
+	destroyed. </p>
+      <h2>The Sieve of Eratosthenes</h2>
+      <p>A classic algorithm to find prime numbers below a given int N.</p>
+<pre>
+#define N 1000
+int i, j, a[N+1];
+for (a[1] = 0, i = 2; i < N; i++) {
+  a[i] = 1;
+}
+for (i=2; i<= N/2; i++) {
+  for (j=2; j<=N/i; j++) {
+    a[i*j] = 0;
+  }
+}
+for(i = 1; i <= N; i++)
+  if(a[i]) printf("%4d", i);
+printf("\n");
+</pre>
+
+      <h2>The Game of Life</h2>
+      <p>Place gif from game of life here, discuss revised version and
+      do comparisons. </p>
+
+
+
+    </div>
+  </body>
+</html>
+

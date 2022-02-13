@@ -1,10 +1,10 @@
 body {
     color: #172694;
     background-color: #EADCD4;
-    font-family: Garamond, serif;
     line-height: 1.2;
     padding: 0px;
     margin: 0px;
+    font-size: 16px;
 }
 
 a {
@@ -14,31 +14,37 @@ a {
     border-radius: 4px;
 }
 
+
+a:visited {
+    color: #172694;
+    /* color: #00563f; */
+    background-color: #e2cec3;
+    text-decoration: none;
+}
 a:hover {
     color: #EADCD4;
     background-color: #172694;
 }
     
 .aside {	/* works for "aside" tag and class name "aside" */
-     display: inline;	/* prevents parent paragraph from breaking */
-      float: right;	/* positions the note to the right of the content */
-      position: relative;	/* forces note to be relative its the normal position */
-     width: 20vw;	/* limits the width of the marginal note */
-      margin-right: -202vw;	/* sets the distance away from the body text */
-      font-size: 16px;	/* makes font slightly smaller */
-     
+    display: inline;	/* prevents parent paragraph from breaking */
+    float: right;	/* positions the note to the right of the content */
+    position: relative;	/* forces note to be relative its the normal position */
+    width: 20vw;	/* limits the width of the marginal note */
+    margin-right: -202vw;	/* sets the distance away from the body text */
+    font-size: 16px;	/* makes font slightly smaller */
+}
+
+.mono {
+    font-size: 20px;
+    font-family: monospace;
 }
 
 
-aside, .aside {
-    display: inline;
-    float: right;
-    position: relative;
-    width: 15vw;
-    margin-right: -16vw;
-    color: #170f0b;
-    font-size: 12px;
-
+table, th, td {
+    border: 0px;
+    /* For displaying a bunch of bits it can be nice to have a border: */
+    /* border: 1px solid #172694; */
 }
 
 a.toc {
@@ -52,25 +58,54 @@ a.toc {
 
 pre {
     font-family: Monospace;
-    font-size: 13px;
-    padding: 3px;
-    background-color: #e2cec3;
-    color:#941726;
+    font-size: 14px;
+    padding: 4px;
+    background-color: #00563f;
+    color:#EADCD4;
 }
 
+.sidebar{height:100%;
+	 background-color:#eadcd4;
+	 position:fixed!important;
+	 overflow:auto}
+
+.bar-item{
+    display: block;
+    font-weight: bold;
+    color: #172694;
+    line-height: 1;
+    font-family: sans-serif;
+    font-size: 14px;
+}
 
 h1 {
     color: #172694;
-    font-family: Helvetica, sans-serif;
     line-height: 1;
+    font-family: sans-serif;
     font-size: 26px;
 }
 
 h2 { 
     color: #172694;
-    font-family: Helvetica, sans-serif;
+    font-family: sans-serif;
     line-height: 1;
-    font-size: 20px;
+    font-size: 24px;
+}
+
+h3 {
+    color: #172694;
+    font-family: sans-serif;
+    line-height: 1;
+    margin: 0px;
+    padding: 0px;
+    font-size: 22px;
+}
+
+.red {
+    color: #941726;
+}
+.yellow {
+    color: #e8d96b;
 }
 
 a.toc { 
@@ -97,6 +132,7 @@ td {
 }
 .red {
     color: #941726;
+
 }
 
 .centered {
@@ -111,12 +147,19 @@ ul { list-style-type: square; }
 
 .email {
     max-height: 1.3em;
- }
+}
 
 .me {
     width: 50%;
     float: right;
     padding-left: 10px;
+}
+
+@media (max-width: 900px) {
+    aside, .aside {float: left;}
+    .sidebar {
+	display: none;
+    }
 }
 
 @media (max-width: 800px) {
