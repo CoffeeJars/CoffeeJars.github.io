@@ -10,17 +10,24 @@
   <body>
     <!-- Sidebar -->
     <div class="sidebar" >
-      <h3>C Reference</h3>
-      <a href="#list_a" class="bar-item">Lexical Elements</a>
-      <a href="#prepro" class="bar-item">The C Preprocessor</a>
+      <a href="#lexical" class="bar-item">Lexical Elements</a>
+      <a href="#keywords" class="bar-item">Keywords</a>      
+      <a href="#compile" class="bar-item">Compilation</a>      
+      <a href="#prepro" class="bar-item">The Preprocessor</a>
       <a href="#progstyle" class="bar-item">Programming Style</a>
-      <a href="" class="bar-item">Types</a>
       <a href="#comments" class="bar-item">Comments</a>
       <a href="#array" class="bar-item">Array Data Structure</a>
+      <a href="#typedef" class="bar-item">Typedefs</a>
+      <a href="#sockets" class="bar-item">Network Sockets</a>      
+      <a href="#pthread" class="bar-item">pthreads</a>      
+      <a href="#avr" class="bar-item">AVR Embedded</a>
+
+	
+      </h3>
     </div>
 
     <div class="centered">
-      <a name="list_a"></a>
+      <a name="lexical"></a>
       <h2>Lexical Elements</h2>
       <p>A C source file is a sequence of characters. Legal characters
       are the 52 Latin capital and small letters,</p>
@@ -65,19 +72,91 @@
 	</table>
 
       <p>Solidus and reverse solidus are the familiar slash and backslash. Lowline is an underscore. </p>
+
+      <a name="keywords"></a>
+      <h2>Keywords</h2>
+      <p>Some combinations of characters are called keywords. These
+      words have spcial meaning to the compiler and cannot be used for
+      variables or identifiers.</p>
+      
+      <table>
+	<tr><td>auto</td><td>break</td><td>case</td></tr>
+	<tr><td>char</td><td>const</td><td>continue</td></tr>
+	<tr><td>default</td><td>do</td><td>double</td></tr>
+	<tr><td>else</td><td>enum</td><td>extern</td></tr>
+	<tr><td>float</td><td>for</td><td>goto</td></tr>
+	<tr><td>if</td><td>int</td><td>long</td></tr>
+	<tr><td>register</td><td>return</td><td>short</td></tr>
+	<tr><td>signed</td><td>sizeof</td><td>static</td></tr>
+      </table>
+      
+      <p>Static variables have a permenant memory
+	    address. A static variable local to a function will be
+	    initalized upon the first call and will persist between
+	calls.</p>
+
+
+<p>sizeof keyword is an operator which determines the size of
+      the argument in bytes at compile time.</p>
+<p> continue keyword is sort of like break. It forces the next step of
+	    iteration skipping all the remaining code within the
+	    looping construct.
+</p>
+
+
+      <a name="compile"></a>
+      <h2>Compilation</h2>
+      <p>C is a compiled language. Computer languages like C use a program called a compiler to
+	convert between human readable source code and machinecode which can be executed on a CPU. </p>
+      <p>We will now step through the stages of c compilation.</p>
+      <!-- <p>Expand conceptually on compilation vs dynamic languages with -->
+      <!-- 	interpreters.</p> -->
+      
+
+
 	
       <a name="prepro"></a>
-      <h2>The C Preprocessor</h2>
+      <h2>The Preprocessor</h2>
+      <p>Lines which begin with a # communicate with the
+      preprocessor. These lines are known as directives.</p>
 
-      <p>C is a compiled language. Computer languages like C use a program called a compiler to
-      convert between human readable source code and machinecode which can be executed on a CPU. </p>
-      <p>Expand conceptually on compilation vs dynamic languages with
-      interpreters.</p>
+      <p>The first step of compilation is preprocessing. According to
+              the <code>man cc</code>, <i>"This stage handles
+              tokenization of the input source file, macro expansion,
+              #include expansion and handling of other preprocessor
+              directives.  The output of this stage is typically
+          called a ".i" (for C)..."</i></p>
 
-      <p>The first stage of compilation is preprocessing where...</p>
+      <p>To see this .i file:</p>
 <code><pre>
 $ cc -E input.c
-</code></pre>
+</pre></code>
+      <p> C being a spartan language, requires including standard
+      library code often. This is done with the #include
+      directive.</p>
+<code><pre>
+#include &lt;stdio.h&gt;
+</pre></code>
+      <p>The include directive instructs the preprocessor to paste the
+      contents of the stdio.h header file into the current file at the
+      location of the directive. The angle brackets indicate that this
+      header file is located in a system dependent "usual" place. </p>
+<code><pre>
+#include "aheader.h"
+</pre></code>
+      <p>The include directive can be used with quotes instead of
+      brackets to specify a path to the header file. This is useful
+      for headers in the local directory to the project, usually ones
+      you write yourself.</p>
+<pre>
+#define TRUE 1
+#define FALSE 0
+</pre>
+      <p>The #define directive will do a text substitution at compile
+	time to replace all instances of TRUE, FALSE with 1, 0. This
+	is an idiom seen a lot in old C textbooks to define
+	constants. Memory is cheap now, use const instead.</pachycladous>
+
       <p>https://randu.org/tutorials/c/basic2.php</p>
 
       <!-- <h2>Lexical Analysis</h2> -->
@@ -85,14 +164,11 @@ $ cc -E input.c
       <!-- <h2>Semantic Analysis</h2> -->
       <!-- <h2>Makefiles</h2> -->
       
-      <a name="comments"></a>
-      <h2>Comments, Directives, Statements, Expressions</h2>
 
-      <p>All the textual elements you may find inside a <code>.c</code> source file. </p>
-      
+      <a name="comments"></a>
       <h2>Comments</h2>
       <p>You spend more time reading your code than the computer
-      does. Leave concise and helpful comments. Old comments can be
+	does. Leave concise and helpful comments. Old comments can be
       misleading, so prune back irrelevant or unnecessary ones. </p>
 <code><pre>
 /* Between the "slash star" and the "star slash" is a comment in c. */
@@ -113,18 +189,6 @@ $ cc -E input.c
 	lie to you. However, well written and purpose-describing
 	comments can make debugging, maintaining, and replacing code easier.</p>
 
-      <h2>Directives</h2>
-      <p>A directive is a command given to the preprocessor. During
-	the first stage of <a href="../cref/1_compilation.html"
-	target="_blank">compilation</a> a program called the
-	preprocessor will read the <code>.c</code> source file and:
-	preprocessor is the program running during the first step of
-	compilation, a program (the preprocessor) reads the source
-	file and does several simple prep steps: Joining lines that
-	continue with \. <p>
-<code><pre>
-#include &#60;stdio.h&#62;
-</code></pre>
 
 <a name="progstyle"></a>
 <h2>C Programming Style</h2>
@@ -137,8 +201,44 @@ $ cc -E input.c
       <h2>Array Data Structure in C</h2>
       <p>An array is a fixed number of same-typed elements stored
 	contiguously. Each element can be accessed with its index, or
-	offset into the array, starting from 0. </p>
+	offset into the array, starting from 0. So</p>
+<pre>
+/* type name[len]; */
+int array[5]; /* defines a[0 ... n-1] */
+array[2] = 3;
+</pre>
+      <p>There is an elegant connection between pointers and array
+	indices. <code>name[n]</code> notation is syntax sugar for the
+	pointer expression <code>*((name) + (n))</code>. Where the
+	pointer to name is incrememted n places and then
+	dereferenced. </p>
+
+
+      
       <!-- <p>Robert Sedgewick: <i>"."</i></p> -->
+      <h2>Vectors</h2>
+      <p>A one-dimensional array can be considered a vector from
+      mathematics. Numerical recipes in C authors suggest the use of
+      a <i>unit offset vector</i> in order to index c vectors
+      implemented as arrays from 1 instead of 0. There is a simple way
+      to use the power of c to index an array [1 ... n] instead of [0
+      ... n-1]. of course there are times when you still want to
+      index from 0, an example being dsp applications.</p>
+<pre>
+float b[4], *bb;
+bb=b-1;
+</pre>
+      <p>This snippet declares b to be an array of 4 floats: b[0],
+      b[1], b[2], b[3]. bb is declared as a pointer to the
+      (non-existant) float before the b array. Deferencing bb would be
+      reading an illegal memory value, but bb can be accessed with
+      indicies 1 through 4: bb[1], bb[2], bb[3], bb[4]. This makes
+      using an offset like this appealing for implementing matrix and
+      vector operations.</p>
+      <p>You can really tell that these people were fortran
+      programmers.. Still, the idea deserves consideration and could
+      create some very clean numerical code. </p>
+
       <h2>Basics</h2>
       <p>Let us define an array <code>a</code> of 5 <code>int</code>'s.</p>
 <pre>
@@ -265,10 +365,176 @@ printf("\n");
 </pre>
 
       <h2>The Game of Life</h2>
-      <p>Place gif from game of life here, discuss revised version and
-      do comparisons. </p>
+<pre>      
+/* Game of Life Simulation: 
+   Author: Stephen Duncanson, spring 2022 
+   Reference: Data structures and Program Design in C by Robert Kruse 
+   Rules: Cells are either alive or dead on a rows * cols sized grid the
+   state of these cells change on generational boundaries, the steps
+   in the simulation. Whether a cell will die, remain alive, or become
+   alive depends on how many of the 8 adjacent neighbors are alive. If
+   a cell is dead it will become alive if it has exactly 3
+   neighbors. If a cell is alive it will die if it has 4 or more
+   neighbors. It will remain alive if it has 2 or 3 neighbors. */
+
+#include stdio.h
+#include stdlib.h
+#include unistd.h
+
+const int rows = 20;
+const int cols = 40;
+const int gens = 50;
+
+void clearscr(void);
+
+unsigned int count8(int board[rows][cols], int i, int j) {
+  unsigned int neighbors = 0;
+  /* Assumes board is a 2d array where each element is alive 1 or dead 0. 
+     ......... where C is the cell denoted by board[i][j]
+     ..xxx.... and each x is one of the neighbors. Depending on our location on
+     ..xCx.... the board we may not have a neighbor on each side. 
+     ..xxx.... For example on the first or last row of the grid.
+     ......... First check if we can have the neighbor, and add its value to count. */
+  neighbors += ((i > 1 && j > 1) ? board[i-1][j-1] : 0);	/* NW */
+  neighbors += ((i > 1) ? board[i-1][j] : 0);	                /* N */
+  neighbors += ((i > 1 && j < cols-2) ? board[i-1][j+1] : 0);	/* NE */
+  neighbors += ((j < cols-2) ? board[i][j+1] : 0);        	/* E */
+  neighbors += ((i < rows-2 && j < cols-2) ? board[i+1][j+1] : 0);/* SE */
+  neighbors += ((i < rows-2) ? board[i+1][j] : 0);      	/* S */
+  neighbors += ((i < rows-2 && j > 1) ? board[i+1][j-1] : 0);	/* SW */
+  neighbors += ((j > 0) ?  board[i][j-1] : 0);	/* W */
+  return neighbors;
+}
+
+void updateBoard(int board_curr[rows][cols], int board_next[rows][cols]) {
+  /* replace board_curr[] with board_next[] and refresh stdout for the
+     new board_current */
+  unsigned int adjacent_count = 0;
+  for (int i=0; i < rows; i++) {
+    for (int j=0; j < cols; j++) {
+      adjacent_count = count8(board_curr, i, j);
+      if (adjacent_count == 3) {  board_next[i][j] = 1; }
+      else if (adjacent_count == 2 && board_curr[i][j])  { board_next[i][j] = 1; }
+      else { board_next[i][j] = 0; }
+    }
+  }
+
+  for (int i=0; i < rows; i++) {
+    for (int j=0; j < cols; j++) {
+      board_curr[i][j] = board_next[i][j];
+    }
+  }
+
+  clearscr();
+}
+
+void initBoard(int board[rows][cols]) {
+  
+  for (int i=0;i < rows;i++) {
+    for (int j=0; j < cols;j++){
+      
+      /* random init logic for now, all even cells */
+      if (i==j || i%2==1 ) { board[i][j]=1; }
+      else { board[i][j]=0; }
+    }
+  }
+  return;
+}
+
+void clearscr(void) {
+#ifdef _WIN32
+    system("cls");
+#elif defined(unix) || defined(__unix__) || defined(__unix) || (defined(__APPLE__) && defined(__MACH__))
+    system("clear");
+    /* add some other OSes here if needed */
+#else
+#error "OS not supported."
+#endif
+}
+
+void printBoard(const int board[rows][cols]) {
+  /* use const as promise not to change board board[] is of unknown
+     size at compile time.
+   */
+  for (int i=0; i < rows; i++) {
+    for (int j=0; j < cols; j++) {
+      printf("%c",board[i][j] ? '#' : '.');
+    }
+    printf("\n"); 
+  }
+}
+      
+int main(void) {
+  int current_board[rows][cols] = {0};
+  int future_board[rows][cols] = {0};
+  
+  initBoard(current_board);
+
+  for (int g=0; g < gens-1; g++) {
+    printf("Generation %d:\n",g);
+    printBoard(current_board);
+    updateBoard(current_board, future_board);
+  }
+  printBoard(current_board);
+  
+  return 0;
+}
+</pre>
+
+<a name="typedef"></a>
+<h2>Typedefs</h2>
+<p>The C language standard has different namespaces for different
+  catagories of identifiers. <i>tag identifiers</i> for
+  struct/enum/union names and <i>ordinary identifiers</i> for typedef
+  and others.</p>
+<p>If you type:</p>
+<pre>
+struct Foo { ... };
+Foo x;
+</pre>
+<p>You will get a compiler error because Foo is only defined in the tag namespace. </p>
+<p>Instead you have to do: </p>
+<pre>
+struct Foo x;  
+</pre>
+<p> Any time you want to refer to a Foo, you would need to call it a struct Foo. This gets annoying. So you can use a typedef:</p>
+<pre>
+struct Foo { ... };
+typedef struct Foo Foo;  
+</pre>
+<p>Now struct Foo is in tag namespace and Foo is in ordinary
+  namespace. Both refer to the same thing.</p>
+<p>The idiom:</p>
+<pre>
+typedef struct Foo { ... } Foo;
+</pre>
+<p>Is a nice shorthand for a declaration and typedef.</p>
+<a name="sockets"></a>
+<h2>Network Sockets</h2>
+<p> See: Beejs Guide to Network Programming<br> What is a socket?
+  UNIX does all I/O by reading or writing to a file descriptor.  A
+  file descriptor is an integer associated with an open file. The OS
+  maintains a table of file descriptors for every open process.  How
+  do we get a socket? call socket() How do we communicate through the
+  socket? send() and recv().  We could use normal read() and write()
+  but send() and recv() give us more control.</p>
+   
+<p> Two types of sockets: Stream sockets "SOCK_STREAM" Datagram
+   sockets "SOCK_DGRAM"</p>
+
+<a name="pthread"></a>
+<h2>pthreads</h2>
+<p>This would be a nice place to quote k and r about how c does not
+support concurrency.</p>
+<p>C supports concurrency at an OS level, the pthread (POSIX) thread library includes functions for multithreading.</p>
 
 
+<a name="avr"></a>
+<h2>XplainedMini (Atmega328PB)</h2>
+<p> Atmels XplainedMini boards, using the mEDBG protocol, are also
+  supported using the "jtag3" programmer type.</p>
+<p>
+  avrdude -c xplainedmini -p m328pb </p>
 
     </div>
   </body>
