@@ -1,41 +1,28 @@
+/* 
+   Stephen Duncanson's Website CSS
+*/
+
 body {
-    color: #172694;
-    background-color: #EADCD4;
-    font-family: 'charter', serif;
+    color: #000080;
+    background-color: #e3dac9;
+    font-family: serif;
     line-height: 1.1;
     padding: 0px;
     margin: 0px;
-    font-size: 1.15em;
+    font-size: 1.2em;
 }
 
 a {
-    color: #172694;
-    background-color: #e2cec3;
+    color: #000080;
+    background-color: #c9d2e3;
     text-decoration: none;
-    border-radius: 4px;
 }
 
 
 a:visited {
-    color: #172694;
-    /* color: #00563f; */
-    background-color: #e2cec3;
-    text-decoration: none;
-}
-a:hover {
-    color: #EADCD4;
-    background-color: #172694;
+    background-color: #cdc9e3;
 }
     
-.aside {	/* works for "aside" tag and class name "aside" */
-    display: inline;	/* prevents parent paragraph from breaking */
-    float: right;	/* positions the note to the right of the content */
-    position: relative;	/* forces note to be relative its the normal position */
-    width: 20vw;	/* limits the width of the marginal note */
-    margin-right: -202vw;	/* sets the distance away from the body text */
-    font-size: 16px;	/* makes font slightly smaller */
-}
-
 .mono {
     font-size: 20px;
     font-family: monospace;
@@ -47,21 +34,12 @@ table, th, td {
     /* border: 1px solid #172694; */
 }
 
-a.toc {
-    color: #172694;
-    background-color: #EADCD4;
-    text-decoration: none;
-    font-size: 50px;
-    font-weight: bold;
-    border-radius: 0px;
-}
-
 pre {
     font-family: Monospace;
     font-size: 14px;
     padding: 4px;
-    background-color: #00563f;
-    color:#EADCD4;
+    background-color: #3b4940;
+    color:#e3dac9;
 }
 
 .sidebar{height:100%;
@@ -69,17 +47,10 @@ pre {
 	 position:fixed!important;
 	 overflow:auto}
 
-.bar-item{
-    display: block;
-    font-weight: bold;
-    color: #172694;
-    line-height: 1;
-    font-family: sans-serif;
-    font-size: 14px;
-}
 
 h1 {
     color: #172694;
+    font-family: sans-serif;
     line-height: 1;
     font-weight: bolder;
     font-size: 1.7em;
@@ -87,9 +58,10 @@ h1 {
 
 h2 { 
     color: #172694;
+    font-family: sans-serif;
     line-height: 1;
     font-weight: bolder;
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 
 h3 {
@@ -137,8 +109,8 @@ td {
 .centered {
     margin-left: auto;
     margin-right: auto;
-    max-width: 670px;
-    padding: 15px;
+    max-width: 800px;
+    padding: 12px;
 }
 
 
