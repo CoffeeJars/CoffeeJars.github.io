@@ -1,145 +1,58 @@
-/* 
-   Stephen Duncanson's Website CSS
-*/
+/* sdunc.github.io - The website of Stephen Duncanson */
+
 
 body {
-    color: #ca9a57;
-    background-color: #312b24;
+    color: #382b26;
+    background-color: #b8c2b9;
     font-family: serif;
     line-height: 1.1;
     padding: 0px;
     margin: 0px;
-    font-size: 1.2em;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
+    font-size: 1.2em; /* TODO change font size */
 }
 
 .home-page {
-  margin: 20px;
-}
-
-.blue-column {
-  background-color: blue;
-  height: 100px;
-}
-
-.green-column {
-  background-color: green;
-  height: 100px;
-}
-
-.double-column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 2;
+    margin: 20px;
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
 }
-
-.orange-column {
-  background-color: orange;
-  height: 100px;
-}
-
-.blue-column {
-  background-color: blue;
-  height: 100px;
-}
-
-.green-column {
-  background-color: green;
-  height: 100px;
-}
-
 .double-column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 2;
+    margin-right: 20px;
+    margin-left: 20px;
 }
-
-@media screen and (min-width: 800px) {
-  .column {
-    flex: 1
-  }
-
-  .double-column {
-    flex: 2
-  }
-}
-
-a {
-    color: #ca9a57;
-    background-color: #3c1402;
-    text-decoration: none;
-}
-
-
-a:visited {
-    background-color: #3c1402;
-}
-    
-a:hover {
-    background-color: #e96f1b;
-    color: #3c1402;
-}
-.mono {
-    font-size: 20px;
-    font-family: monospace;
-}
-
-table, th, td {
-    border: 0px;
-    /* For displaying a bunch of bits it can be nice to have a border: */
-    /* border: 1px solid #172694; */
-}
-
-pre {
-    font-family: Monospace;
-    font-size: 14px;
-    padding: 4px;
-    background-color: #3b4940;
-    color:#e3dac9;
-}
-
-.sidebar{height:100%;
-	 background-color:#eadcd4;
-	 position:fixed!important;
-	 overflow:auto}
-
 
 h1 {
-    color: #3c1402;
+    color: #382b26;
+    margin: 0px;
     font-family: sans-serif;
     line-height: 1;
     font-weight: bolder;
     font-size: 1.7em;
 }
 
-h2 { 
+h2 {
     color: #3c1402;
     font-family: sans-serif;
     line-height: 1;
@@ -147,46 +60,47 @@ h2 {
     font-size: 1.4em;
 }
 
-h3 {
-    color: #172694;
-    line-height: 1;
-    margin: 0px;
-    padding: 0px;
-    font-size: 22px;
+table, th, td {
+    border: 0px solid #929c93;
+    border-collapse: collapse;
 }
 
-.red {
-    color: #941726;
-}
-.yellow {
-    color: #e8d96b;
-}
-
-a.toc { 
-    color: #172694;
-    font-family: Helvetica, sans-serif;
-    line-height: 1;
-    display: block;
-    font-size: 50px;
-    padding: 0px;
-    margin: 0px;
-}
-
-
-.dark {
-
-    
-}
 table {
-    font-family: Monospace;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-td {
-    padding-right: 10px;
+a {
+    color: #382b26;
+    background-color: #929c93;
+    text-decoration: none;
+    border-radius: 3px;
 }
-.red {
-    color: #941726;
 
+
+    a:visited {
+        background-color: #929c93;
+    }
+
+    a:hover {
+        background-color: #88a68c;
+        color: #382b26;
+    }
+
+
+
+.email {
+    max-height: 1em;
+}
+
+@media screen and (min-width: 700px) {
+    .column {
+        flex: 1
+    }
+
+    .double-column {
+        flex: 2
+    }
 }
 
 .centered {
@@ -196,86 +110,38 @@ td {
     padding: 12px;
 }
 
-
-ul { list-style-type: square; }
-
-.email {
-    max-height: 1.3em;
-}
-
-.me {
-    width: 50%;
-    float: right;
-    padding-left: 10px;
-}
-
-@media (max-width: 900px) {
-    aside, .aside {float: left;}
-    .sidebar {
-	display: none;
-    }
-}
-
-@media (max-width: 800px) {
-    aside, .aside {display: none;}
-}
-
-
-@media (max-width: 670px) {
-
-    aside, .aside {
-	display: none;
-    }
-
-    .me {
-	float: none;
-	display: block;
-	width: 100%;
-	padding: 0;
-	margin-bottom: 10px;
-    }
-    div.margin {
-	display: none;
-    }
-}
-div.margin {
-  position: relative;
-  left: 100%;
-  max-width: 100px;
-  font-weight: bold;
-
-  font-size: 12px;
-}
-
-
-@font-face {
-font-family: charter;
-font-style: normal;
-font-weight: normal;
-font-stretch: normal;
-src: url('Charter/charter_regular.woff2') format('woff2');
+ul {
+    list-style-type: square;
 }
 
 @font-face {
-font-family: charter;
-font-style: italic;
-font-weight: normal;
-font-stretch: normal;
-src: url('Charter/charter_italic.woff2') format('woff2');
+    font-family: charter;
+    font-style: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    src: url('Charter/charter_regular.woff2') format('woff2');
 }
 
 @font-face {
-font-family: charter;
-font-style: normal;
-font-weight: bold;
-font-stretch: normal;
-src: url('Charter/charter_bold.woff2') format('woff2');
+    font-family: charter;
+    font-style: italic;
+    font-weight: normal;
+    font-stretch: normal;
+    src: url('Charter/charter_italic.woff2') format('woff2');
 }
 
 @font-face {
-font-family: charter;
-font-style: italic;
-font-weight: bold;
-font-stretch: normal;
-src: url('Charter/charter_bold_italic.woff2') format('woff2');
+    font-family: charter;
+    font-style: normal;
+    font-weight: bold;
+    font-stretch: normal;
+    src: url('Charter/charter_bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: charter;
+    font-style: italic;
+    font-weight: bold;
+    font-stretch: normal;
+    src: url('Charter/charter_bold_italic.woff2') format('woff2');
 }
