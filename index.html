@@ -1,56 +1,92 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta name="viewport" content="width=500" />
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="icon" href="img/icon.png"/>
+    <link rel="icon" href="img/icon.png" />
     <title>srd</title>
-  </head>
-  <body>
-    <div class="centered">
+</head>
 
-      <h1>srd</h1>      
+<body>
 
-      <p><img class="me" src="img/me.png">
+    <div class='home-page'>
+        <div class='row'>
+            <div class='column'>
+                <h1>Stephen Duncanson</h1>
+                <p>
+                    Welcome! I'm a Computer Engineer.
+                    I'm into programming, reading or listening to books, running, hiking,
+                    and electronics.
+                </p>
 
-	<!-- Intro, about, greeting.-->
-	Welcome! I'm a Computer Engineer.
-	I'm into programming, reading or listening to books, running, hiking,
-	and electronics.</p>
+                <p>
+                    I have competed in
+                    one
+                    <a href='https://www.openpowerlifting.org/u/stephenduncanson'
+                       target="_blank">powerlifting</a> meet and survived two half marathons.
+                </p>
 
-      <p>I have competed in
-	one <a href='https://www.openpowerlifting.org/u/stephenduncanson'
-	target="_blank">powerlifting</a> meet and <del>jogged
-	one</del> survived two half marathons.</p>
+                <p>
+                    As an undergraduate I helped publish
+                    <a href="https://arxiv.org/abs/2110.08145"
+                       target="_blank">
+                        Resonance-enhanced multiphoton ionization in
+                        the x-ray regime
+                    </a>.
+                </p>
 
-  <p>As an undergraduate I helped publish
-	<a href="https://arxiv.org/abs/2110.08145"
-	target="_blank">Resonance-enhanced multiphoton ionization in
-	the x-ray regime</a>.</p>
+                <p>Send mail to: stephen (dot) duncanson (at) gmail (dot) com</p>
 
-      <p>Send mail to: <br><img class="email" src="img/email.png"/></p>
+            </div>
 
-
-      
-<!--       <\!-- <h2>computer implementation and history</h2> -\-> -->
-      
-<!--       <h2> C Reference</h2> -->
-<!-- <p> <a href="cref.html" target="_blank">Evergreen reference material</a> for myself on the C programming -->
-<!-- 	  language</a>. The goal is to provide helpful long term -->
-<!-- 	  reference code. Errors are my own, email me if you see -->
-<!-- 	  one. </p> -->
-<!--             <ol> -->
-<!--                 <li>animate the images? dots move and grow? </li> -->
-<!--                 <li>get whatever image I want to convert into GIMP</li> -->
-<!--                 <li>Image -> mode -> greyscale</li> -->
-<!--                 <li>Colors -> Levels -> Set output in range [180,220] to wash the photo out. A higher number will wash the photo out more, resulting in more white and fewer dots in the final image.</li> -->
-<!--                 <li>Image -> mode -> Indexed. With settings: 1-bit palette / Color dithering: Floyd-Steinberg (normal)</li> -->
-<!--                 <li>Image -> Mode -> RGB</li> -->
-<!--                 <li>Paint bucket tool to fill in white bg the offwhite <code>#f6e8e5</code> of the site.</li> -->
-<!--                 <li>Save as png into site folder</li> -->
-<!--             </ol> -->
+            <div class='column'>
+                <img style="width: 100%;  " src="img/me.png">
+            </div>
+        </div>
 
 
-</div>
-  </body>
+        <div class="row">
+            <div class="double-column">
+                <h2>Reference Material</h2>
+                <p>
+                    <a href="cref.html" target="_blank">C programming language</a> reference material.
+                    Likely full of mistakes.
+                </p>
+                <h3> Halftone Images in GIMP</h3>
+
+                <ol>
+                    <li>Open the image in get whatever image I want to convert into GIMP</li>
+                    <li>Image -> mode -> greyscale</li>
+                    <li>Colors -> Levels -> Set output in range [180,220] to wash the photo out. A higher number will wash the photo out more, resulting in more white and fewer dots in the final image.</li>
+                    <li>Image - mode - Indexed. Settings: 1-bit palette / Color dithering: Floyd-Steinberg (normal)</li>
+                    <li>Image - Mode - RGB.</li>
+                    <li>Change colors as desired.</li>
+                </ol>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="double-column">
+                <table style="width:100%">
+                    <tr>
+                        <td>Selected</td>
+                        <td>1/1/18</td>
+                    </tr>
+                    <tr>
+                        <td>Blog</td>
+                        <td>1/1/19</td>
+                    </tr>
+                    <tr>
+                        <td>Posts</td>
+                        <td>1/1/20</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
+
 </html>
