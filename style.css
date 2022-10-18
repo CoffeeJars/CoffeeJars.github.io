@@ -1,6 +1,7 @@
 /* sdunc.github.io CSS
    srd 2018 - 2022 */
 
+
 body {
     color: #382b26;
     background-color: #b8c2b9;
@@ -44,13 +45,13 @@ body {
 }
 
 a {
-    color: #382b26;
-    background-color: #929c93;
+    color: #766980;
+    background-color: #b8c2b9;
     text-decoration: none;
     border-radius: 3px;
 }
     a:visited {
-        background-color: #929c93;
+        color: #766980;
     }
 
     a:hover {
