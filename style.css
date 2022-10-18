@@ -48,6 +48,7 @@ a {
     color: #766980;
     background-color: #b8c2b9;
     text-decoration: none;
+    font-style: italic;
     border-radius: 3px;
 }
     a:visited {
