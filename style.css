@@ -1,5 +1,5 @@
 /* sdunc.github.io CSS
-   srd 2018 - 2023 */
+   srd 2018 - 2024 */
 
 
 body {
@@ -12,7 +12,7 @@ body {
 }
 
 .home-page {
-    margin: 20px;
+    margin: 40px;
     max-width: 800px;
     margin-right: auto;
     margin-left: auto;
@@ -32,14 +32,6 @@ p {
     flex-wrap: wrap;
     width: 100%;
 }
-
-table, td, th {
-}
-
-th {
-    text-align: left;
-}
-
 
 .column {
     margin-left: 20px;
@@ -67,18 +59,14 @@ a {
     border-radius: 3px;
 }
 
-    a:visited {
-        color: #766980;
-        font-style: normal;
-    }
+a:visited {
+    color: #766980;
+    font-style: normal;
+}
 
-    a:hover {
-        background-color: #9793AE;
-        color: #382b26;
-    }
-
-ul {
-    list-style-type: square;
+a:hover {
+    background-color: #9793AE;
+    color: #382b26;
 }
 
 h1 {
